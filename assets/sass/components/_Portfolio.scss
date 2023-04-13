@@ -1,0 +1,182 @@
+/* Portfolio */
+.portfolio{
+  position: relative;
+}
+
+.portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.portfolio-box {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.portfolio-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.portfolio-overlay {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: hsla(234deg, 30%, 10%, 0.7);
+}
+
+.portfolio-overlay h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.portfolio-box .bx {
+  font-size: 24px;
+  padding: 10px;
+  background: var(--container-color);
+  color: var(--bg-color);
+  border-radius: 4px;
+}
+
+.portfolio-overlay .bx:hover {
+  background: var(--main-color);
+  transition: 0.3s all linear;
+}
+
+.portfolio-box:hover .portfolio-overlay {
+  top: 0;
+  transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.projects-content {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.project-box {
+  padding: 20px 10px;
+  background: var(--box-color);
+  border-radius: 0.4rem;
+  text-align: center;
+}
+
+.projects-box h2 {
+  font-size: 1.2rem;
+}
+
+.projects-box span {
+  font-size: 0.845rem;
+}
+
+//Modal style
+/* Modal */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0, .5);
+  overflow-y: hidden;
+  overflow: hidden;
+  z-index: 9999999988;
+}
+
+.modal-content {
+  background-color: #f4f4f4;
+  width: 80%;
+  height: 80%;
+  margin: 5% auto;
+  padding: .5em;
+  // border: solid var(--box-color);
+  border: 5px solid var(--main-color);
+  border-radius: 8px;
+  animation-name: modalopen;
+  animation-duration: 1.75s;
+  overflow-y: scroll;
+}
+
+@keyframes modalopen {
+  from{opacity: 0}
+  to {opacity: 1}
+}
+
+.modal-header h2, .modal-footer h3 {
+  margin: 0;
+}
+
+.modal-header {
+  background: var(--container-color);
+  padding: 15px;
+  color: var(--bg-color);
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.modal-body {
+  padding: 0px 20px 15px 20px;
+}
+
+.closeBtn {
+  color: #ccc;
+  float: right;
+  font-size: 1.875em;
+  color: white;
+}
+
+.closeBtn:hover, .closeBtn:focus {
+  color: var(--main-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+// grid
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
+  @media only screen and (max-width: 565px) {
+    grid-template-columns: auto;
+  }
+}
+
+.grid {
+  & > article {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    & img {
+      width: 100%;
+      max-width: 100%;
+      height: 190px;
+      object-fit: contain;
+    }
+    & .text{
+      color: black;
+      padding: 20px;
+      & h1{
+        color: var(--box-color);
+      }
+    }
+  }
+} 

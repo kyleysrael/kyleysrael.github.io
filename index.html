@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Kyle Cua</title>
+  <meta name="description" content="" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <!--Link to Css Swiper-->
+  <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+  <!--Box Icon-->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <div id="particles-js">
+    <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="1556" height="1428"></canvas>
+  </div>
+  <!--Header-->
+  <header>
+    <!--Nav-->
+    <div class="nav container">
+      <!--Logo-->
+      <a href="#" class="logo">Kyle Cua</a>
+      <!--Navbar-->
+      <ul class="navbar">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <!--Menu Icon-->
+      <div class="menu-icon">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </div>
+  </header>
+  <!--Home-->
+  
+  <section class="home container" id="home">
+    <div class="home-content">
+      <div class="home-img">
+        <img src="./assets/img/kc.png" alt="" />
+      </div>
+      <div class="home-text">
+        <h3>Hello</h3>
+        <h2>I'm <span class="color" id="typewriter"></span><span class="typewriter-cursor"></span></h2>
+        <p>
+          I'm an <span class="color">intern</span> in Manila, Philippines, and
+          I'm 18 years old. I feel very strongly about creating
+          <span class="color">websites</span> and
+          <span class="color">applications</span>.<br />
+          Here is some further information
+          <span class="color">about me.</span>
+        </p>
+        <!--Social-->
+        <div class="social">
+          <a href="#"><i class="bx bxl-facebook"></i></a>
+          <a href="#"><i class="bx bxl-twitter"></i></a>
+          <a href="#"><i class="bx bxl-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--About-->
+  <section class="about container" id="about">
+    <!--Heading-->
+    <h2 class="heading">About</h2>
+    <!--About Content-->
+    <div class="about-content">
+      <div class="about-data">
+        <span>About Me</span>
+        <h2>
+          Web developer, <br />
+          Web Designer & Handsome
+        </h2>
+        <a href="cv.docx" class="btn" download="">
+          Download Cv
+          <i class="bx bx-download"></i>
+        </a>
+      </div>
+      <div class="about-text">
+        <p>
+          Hi there! My name is Kyle Ysrael A. Cua, and I am a multi-talented
+          creative professional with a passion for web development and graphic
+          design.
+        </p>
+        <p>
+          I am a multi-talented web developer and graphic designer with a
+          strong foundation in both technical and artistic skills. As a
+          freelance professional, I am dedicated to delivering top-quality
+          work and exceeding expectations. I am excited to continue building
+          my career and making a meaningful impact in the world.
+        </p>
+        <p>Get your Project book with contact button.</p>
+      </div>
+    </div>
+  </section>
+
+  <!--Services-->
+  <section class="services container" id="services">
+    <!--Heading-->
+    <h2 class="heading">Services</h2>
+    <!--Services Content-->
+    <div class="services-content">
+      <div class="services-box">
+        <i class="bx bx-code-alt"></i>
+        <h2>Web Development</h2>
+        <p>
+          As a web developer, I have the unique ability to craft and shape the
+          online world. From building beautiful and functional websites to
+          creating intuitive and seamless user experiences, I am constantly
+          pushing the boundaries of what is possible on the web. Whether it's
+          bringing a client's vision to life or solving complex technical
+          challenges, I am always up for the task. I am a web developer, and I
+          am proud to be at the forefront of shaping the digital landscape.
+        </p>
+      </div>
+      <div class="services-box">
+        <i class="bx bx-lock-alt"></i>
+        <h2>Freelance</h2>
+        <p>
+          As a freelancer, I am my own boss and have the freedom to choose the
+          projects and clients that align with my values and goals. With the
+          ability to work remotely and set my own schedule, I am able to
+          pursue my passions and continuously learn and grow as a
+          professional. I am a freelancer, and I am proud to be able to craft
+          my own path and make a meaningful impact in the world.
+        </p>
+      </div>
+      <div class="services-box">
+        <i class="bx bxs-edit"></i>
+        <h2>Wordpress</h2>
+        <p>
+          I am a web designer, using my creativity and technical skills to
+          craft visually stunning and intuitive online experiences. From
+          conceptualizing and designing beautiful websites to creating
+          cohesive and effective branding, I am constantly pushing the
+          boundaries of what is possible in the digital world. Whether it's
+          bringing a client's vision to life or solving complex design
+          challenges, I am always up for the task. I am a web designer, and I
+          am proud to be at the forefront of shaping the online landscape.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!--Portfolio-->
+  <section class="portfolio container" id="portfolio">
+    <h2 class="heading">Portfolio</h2>
+    <!--Portfolio Content-->
+    <div class="portfolio-content">
+      <div class="portfolio-box">
+        <img src="./assets/img/portfolio-1.webp" alt="" class="portfolio-img" />
+        <!--Overlay-->
+        <div class="portfolio-overlay">
+          <h2>Web Development</h2>
+          <a id="modal-1" class="modal-btn">
+            <i class="bx bx-link-alt"></i>
+          </a>
+          <!-- Modal 1 -->
+          <div id="simpleModal" class="modal">
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class="closeBtn">&times;</span>
+                <h2>Web Development</h2>
+              </div>
+              <div class="modal-body">=
+                <div class="container">
+                  <div class="grid">
+                    <article>
+                      <img src="/assets/img/mitsu.png" alt="Sample photo">
+                      <div class="text">
+                        <h1>Mitsukoshi Mall BGC</h1>
+                        <p>Mitsukoshi is a Japanese chain of department stores. It has branches throughout Japan and has expanded to East and Southeast Asia and the United States. The first Philippine branch opened on November 18, 2022.</p>
+                        <a href="https://www.mitsukoshi.ph/home/" class="btn">Visit Here!</a>
+                      </div>
+                    </article>
+                    <article>
+                      <img src="https://picsum.photos/600/400?image=1063" alt="Sample photo">
+                      <div class="text">
+                        <h3>Quantrics</h3>
+                        <p>Dramatically engage seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing.</p>
+                        <a href="https://codepen.io/collection/XdWJOQ/" class="btn">Visit Here!</a>
+                      </div>
+                    </article>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-box">
+        <img src="./assets/img/portfolio-2.webp" alt="" class="portfolio-img" />
+        <!--Overlay-->
+        <div class="portfolio-overlay">
+          <h2>Wordpress</h2>
+          <a href="javascript:void(0)" id="modal-2">
+            <i class="bx bx-link-alt"></i>
+          </a>
+          <!-- Modal 2 -->
+        <div id="modal-content-2" class="modal-content" style="display: none;">
+          <!-- Modal content goes here -->
+        </div>
+        </div>
+      </div>
+      <div class="portfolio-box">
+        <img src="./assets/img/portfolio-3.webp" alt="" class="portfolio-img" />
+        <!--Overlay-->
+        <div class="portfolio-overlay">
+          <h2>Freelance</h2>
+          <a href="javascript:void(0)" id="modal-3">
+            <i class="bx bx-link-alt"></i>
+          </a>
+            <!-- Modal 3 -->
+        <div id="modal-content-3" class="modal-content" style="display: none;">
+          <!-- Modal content goes here -->
+        </div>
+        </div>
+      </div>
+      <div class="portfolio-box">
+        <img src="./assets/img/portfolio-4.webp" alt="" class="portfolio-img" />
+        <!--Overlay-->
+        <div class="portfolio-overlay">
+          <h2>Others</h2>
+          <a href="javascript:void(0)" id="modal-4">
+            <i class="bx bx-link-alt"></i>
+          </a>
+            <!-- Modal 4 -->
+        <div id="modal-content-4" class="modal-content" style="display: none;">
+          <!-- Modal content goes here -->
+        </div>
+        </div>
+      </div>
+    </div>   
+  </section>
+
+  <section class="projects container" id="projects">
+    <!--Heading-->
+    <h2 class="heading">Projects</h2>
+    <!--Projects Content-->
+    <div class="projects-content">
+      <div class="project-box">
+        <h2>5+</h2>
+        <span>Projects Completed</span>
+      </div>
+      <div class="project-box">
+        <h2>000+</h2>
+        <span>Website Develop</span>
+      </div>
+      <div class="project-box">
+        <h2>000+</h2>
+        <span>Happy Clients</span>
+      </div>
+    </div>
+  </section>
+
+  <!--Review-->
+  <section class="container reviews" id="reviews">
+    <!--Heading-->
+    <h2 class="heading">Reviews</h2>
+    <!-- Review Content-->
+    <div class="reviews-content swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <!-- Review Box -->
+          <div class="review-box">
+            <i class="bx bxs-quote-right"></i>
+            <p class="review-text">
+              I had the pleasure of working with Kyle on a web development
+              project and was consistently impressed by their level of
+              expertise and attention to detail. Kyle has a strong
+              understanding of the latest technologies and a natural talent
+              for design, which was evident in the beautifully crafted website
+              they delivered. He was also a pleasure to work with,
+              consistently going above and beyond to ensure that all of my
+              needs and preferences were met. I would highly recommend to Kyle
+              anyone in need of a talented and reliable web developer and look
+              forward to the opportunity to work with them again in the
+              future.
+            </p>
+            <div class="review-profile">
+              <h2>Althea Denisse</h2>
+              <span>From Korea</span>
+              <img src="./assets/img/review-1.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <!-- Review Box -->
+          <div class="review-box">
+            <i class="bx bxs-quote-right"></i>
+            <p class="review-text">
+              Working with Kyle as a web developer was a pleasure. Their
+              expertise and attention to detail resulted in a fantastic end
+              product.
+            </p>
+            <div class="review-profile">
+              <h2>Brigs Alfonso</h2>
+              <span>From The Philippines</span>
+              <img src="./assets/img/brigs.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <!-- Review Box -->
+          <div class="review-box">
+            <i class="bx bxs-quote-right"></i>
+            <p class="review-text">
+              As a business owner, it was important to me to find a web
+              developer who could not only bring my vision to life but also be
+              a reliable and trustworthy partner in the process. Kyle exceeded
+              all of my expectations in that regard. From the very beginning,
+              they took the time to understand my needs and goals, and
+              consistently provided valuable insights and suggestions
+              throughout the project. The end result was a beautifully
+              designed and highly functional website that has already had a
+              positive impact on my business. I am extremely grateful to have
+              had the opportunity to work with him and would highly recommend
+              their services to anyone in need of a top-notch web developer.
+            </p>
+            <div class="review-profile">
+              <h2>Mae Santiago</h2>
+              <span>From America</span>
+              <img src="./assets/img/review-3.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!--Contact Form-->
+  <section class="contact contaniner" id="contact">
+    <!--Heading-->
+    <h2 class="heading">Contact</h2>
+    <!--Contact Form-->
+    <form action="" class="contact-form" id="contact-form">
+      <input type="text" placeholder="Your Name" class="name" required />
+      <input type="email" name="" id="" placeholder="Email Address..." class="email" required />
+      <textarea name="" id="" cols="30" rows="10" placeholder="Write mesage here..." class="message"
+        required></textarea>
+      <input type="submit" value="Send" class="send-btn" onclick="sendMail()" />
+    </form>
+  </section>
+
+  <!--Footer-->
+  <section class="footer container" id="footer">
+    <div class="social">
+      <a href="mailto:d3kulang@gmail.com"><i class="bx bx-envelope"></i></a>
+      <a href="https://www.facebook.com/kcysrael28/"><i class="bx bxl-facebook"></i></a>
+      <a href="#"><i class="bx bxl-twitter"></i></a>
+      <a href="#"><i class="bx bxl-instagram"></i></a>
+    </div>
+    <!--Footer Links-->
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Disclaimer</a>
+    </div>
+    <!-- Copyright -->
+    <p>&#169; Kyle Pogi</p>
+  </section>
+  <!--Link Swiper js-->
+  <script src="./assets/js/swiper-bundle.min.js"></script>
+  <!--Link to JS-->
+  <script src="./assets/js/script.js" async defer></script>
+  <script src="/assets/js/typewriterEffects.js"></script>
+  <script src="./assets/js/particles.js"></script>
+  <!--Js email-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+ <script src="/assets/js/modal.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("IR1Jz2JwCPRuIbwPR");
+    })();
+  </script>
+  <script type="text/javascript"> 
+  particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 60,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.1,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 6,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.1,
+      "width": 2
+    },
+    "move": {
+      "enable": true,
+      "speed": 1.5,
+      "direction": "top",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": false,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": false,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+
+  </script>
+  <script src="./assets/js/particles.min.js"></script>
+
+  <!--Sweet alert-->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
+</html>
