@@ -242,7 +242,7 @@ header {
   width: 3px;
   height: 1.2em;
   margin-left: 2px;
-  background-color: #98a7fc;
+  background-color: var(--bg-color);
   animation: blink 0.7s infinite;
 }
 
@@ -260,6 +260,7 @@ header {
 #particles-js {
   position: fixed;
   width: 100vw;
+  height: 100vh;
 }
 
 .heading {
