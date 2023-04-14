@@ -8,6 +8,7 @@
   <meta name="description" content="" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="website icon" type="png" href="./assets/img/kc-low-resolution-color-logo-removebg-preview.png">
   <link rel="stylesheet" href="./assets/css/style.css" />
   <!--Link to Css Swiper-->
   <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
@@ -155,6 +156,7 @@
   <!--Portfolio-->
   <section class="portfolio container" id="portfolio">
     <h2 class="heading">Portfolio</h2>
+
     <!--Portfolio Content-->
     <div class="portfolio-content">
       <div class="portfolio-box">
@@ -162,17 +164,16 @@
         <!--Overlay-->
         <div class="portfolio-overlay">
           <h2>Web Development</h2>
-          <a id="modal-1" class="modal-btn">
+          <a class="modal-btn">
             <i class="bx bx-link-alt"></i>
           </a>
           <!-- Modal 1 -->
           <div id="simpleModal" class="modal">
             <div class="modal-content">
               <div class="modal-header">
-                <span class="closeBtn">&times;</span>
-                <h2>Web Development</h2>
+                <a class="closeBtn"><i class='bx bx-arrow-back'></i> Go back</a>
               </div>
-              <div class="modal-body">=
+              <div class="modal-body">
                 <div class="container">
                   <div class="grid">
                     <article>
@@ -184,14 +185,13 @@
                       </div>
                     </article>
                     <article>
-                      <img src="https://picsum.photos/600/400?image=1063" alt="Sample photo">
+                      <img src="/assets/img/quantrics.png" alt="Sample photo">
                       <div class="text">
                         <h3>Quantrics</h3>
-                        <p>Dramatically engage seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing.</p>
-                        <a href="https://codepen.io/collection/XdWJOQ/" class="btn">Visit Here!</a>
+                        <p>Quantrics provides in-house IT development, shared services and customer experience for Canada's leading media and telecommunications company and its subsidiary companies.</p>
+                        <a href="https://quantricswebsite.azurewebsites.net/" class="btn">Visit Here!</a>
                       </div>
                     </article>
-
                   </div>
                 </div>
               </div>
@@ -199,20 +199,30 @@
           </div>
         </div>
       </div>
+
       <div class="portfolio-box">
         <img src="./assets/img/portfolio-2.webp" alt="" class="portfolio-img" />
         <!--Overlay-->
         <div class="portfolio-overlay">
           <h2>Wordpress</h2>
-          <a href="javascript:void(0)" id="modal-2">
+          <a href="javascript:void(0)" class="modal-btn2">
             <i class="bx bx-link-alt"></i>
           </a>
           <!-- Modal 2 -->
-        <div id="modal-content-2" class="modal-content" style="display: none;">
-          <!-- Modal content goes here -->
-        </div>
+          <div id="simpleModal-2" class="empty-modal">
+            <div class="modal-content">
+              <div class="modal-header">
+                <a class="closeBtn"><i class='bx bx-arrow-back'></i> Go back</a>
+              </div>
+              <div class="modal-body">
+                <h1>Coming Soon</h1>
+
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
       <div class="portfolio-box">
         <img src="./assets/img/portfolio-3.webp" alt="" class="portfolio-img" />
         <!--Overlay-->
@@ -227,6 +237,7 @@
         </div>
         </div>
       </div>
+
       <div class="portfolio-box">
         <img src="./assets/img/portfolio-4.webp" alt="" class="portfolio-img" />
         <!--Overlay-->
@@ -241,6 +252,7 @@
         </div>
         </div>
       </div>
+
     </div>   
   </section>
 
@@ -370,7 +382,7 @@
       <a href="#">Disclaimer</a>
     </div>
     <!-- Copyright -->
-    <p>&#169; Kyle Pogi</p>
+    <p>&#169; Kyle Cua</p>
   </section>
   <!--Link Swiper js-->
   <script src="./assets/js/swiper-bundle.min.js"></script>
