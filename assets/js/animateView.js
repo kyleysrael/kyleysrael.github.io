@@ -142,4 +142,25 @@ function animateView() {
     el.style.display = "inline-block";
   }
 }
+
+//? detect element is Inview
+const elementInView = (el, offset = 1.25) => {
+  const scroll = window.scrollY || window.pageYOffset;
+  const boundsTop = el.getBoundingClientRect().top + scroll;
+
+  const viewport = {
+    top: scroll,
+    bottom: scroll + window.innerHeight,
+  };
+
+  const bounds = {
+    top: boundsTop,
+    bottom: boundsTop + el.clientHeight,
+  };
+
+  return (
+    (bounds.bottom >= viewport.top && bounds.bottom <= viewport.bottom) ||
+    (bounds.top <= viewport.bottom && bounds.top >= viewport.top)
+  );
+};
 animateView(); // Call the animateView function after the HTML elements have loaded

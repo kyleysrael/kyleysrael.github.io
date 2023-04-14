@@ -10,11 +10,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="website icon" type="png" href="./assets/img/kc-low-resolution-color-logo-removebg-preview.png">
   <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <!--Link to Css Swiper-->
   <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
   <!--Box Icon-->
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 </head>
 
 <body>
@@ -47,22 +50,22 @@
   
   <section class="home container" id="home">
     <div class="home-content">
-      <div class="home-img">
+      <div class="home-img" animated="slideY">
         <img src="./assets/img/kc.png" alt="" />
       </div>
       <div class="home-text">
-        <h3>Hello</h3>
+        <h3 animated="slideY">Hello</h3>
         <h2>I'm <span class="color" id="typewriter"></span><span class="typewriter-cursor"></span></h2>
         <p>
-          I'm an <span class="color">intern</span> in Manila, Philippines, and
+          I'm an <span class="color" animated="slideX">intern</span> in Manila, Philippines, and
           I'm 18 years old. I feel very strongly about creating
-          <span class="color">websites</span> and
-          <span class="color">applications</span>.<br />
+          <span class="color" animated="slideY">websites</span> and
+          <span class="color" animated="slideY">applications</span>.<br />
           Here is some further information
-          <span class="color">about me.</span>
+          <span class="color" animated="slideY">about me.</span>
         </p>
         <!--Social-->
-        <div class="social">
+        <div class="social" animated="staggerChild slideX">
           <a href="#"><i class="bx bxl-facebook"></i></a>
           <a href="#"><i class="bx bxl-twitter"></i></a>
           <a href="#"><i class="bx bxl-instagram"></i></a>
@@ -71,7 +74,7 @@
     </div>
   </section>
   <!--About-->
-  <section class="about container" id="about">
+  <section class="about container" id="about" animated="staggerChild slideY">
     <!--Heading-->
     <h2 class="heading">About</h2>
     <!--About Content-->
@@ -106,11 +109,11 @@
   </section>
 
   <!--Services-->
-  <section class="services container" id="services">
+  <section class="services container" id="services" animated="slideY">
     <!--Heading-->
     <h2 class="heading">Services</h2>
     <!--Services Content-->
-    <div class="services-content">
+    <div class="services-content" animated="staggerChild slideY">
       <div class="services-box">
         <i class="bx bx-code-alt"></i>
         <h2>Web Development</h2>
@@ -158,7 +161,7 @@
     <h2 class="heading">Portfolio</h2>
 
     <!--Portfolio Content-->
-    <div class="portfolio-content">
+    <div class="portfolio-content" animated="staggerChild slideY">
       <div class="portfolio-box">
         <img src="./assets/img/portfolio-1.webp" alt="" class="portfolio-img" />
         <!--Overlay-->
@@ -212,11 +215,10 @@
           <div id="simpleModal-2" class="empty-modal">
             <div class="modal-content">
               <div class="modal-header">
-                <a class="closeBtn"><i class='bx bx-arrow-back'></i> Go back</a>
+                <a class="closeBtn" id="emptyClose"><i class='bx bx-arrow-back'></i> Go back</a>
               </div>
               <div class="modal-body">
-                <h1>Coming Soon</h1>
-
+                <h1>Coming Soon!</h1>
               </div>
             </div>
           </div>
@@ -232,9 +234,16 @@
             <i class="bx bx-link-alt"></i>
           </a>
             <!-- Modal 3 -->
-        <div id="modal-content-3" class="modal-content" style="display: none;">
-          <!-- Modal content goes here -->
-        </div>
+            <div id="simpleModal-2" class="empty-modal">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <a class="closeBtn" id="emptyClose"><i class='bx bx-arrow-back'></i> Go back</a>
+                </div>
+                <div class="modal-body">
+                  <h1>Coming Soon!</h1>
+                </div>
+              </div>
+            </div>
         </div>
       </div>
 
@@ -247,20 +256,27 @@
             <i class="bx bx-link-alt"></i>
           </a>
             <!-- Modal 4 -->
-        <div id="modal-content-4" class="modal-content" style="display: none;">
-          <!-- Modal content goes here -->
-        </div>
+            <div id="simpleModal-2" class="empty-modal">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <a class="closeBtn" id="emptyClose"><i class='bx bx-arrow-back'></i> Go back</a>
+                </div>
+                <div class="modal-body">
+                  <h1>Coming Soon!</h1>
+                </div>
+              </div>
+            </div>
         </div>
       </div>
 
     </div>   
   </section>
 
-  <section class="projects container" id="projects">
+  <section class="projects container" id="projects" animated="slideY">
     <!--Heading-->
     <h2 class="heading">Projects</h2>
     <!--Projects Content-->
-    <div class="projects-content">
+    <div class="projects-content" animated="staggerChild slideY">
       <div class="project-box">
         <h2>5+</h2>
         <span>Projects Completed</span>
@@ -369,7 +385,7 @@
 
   <!--Footer-->
   <section class="footer container" id="footer">
-    <div class="social">
+    <div class="social" animated="staggerChild slideX">
       <a href="mailto:d3kulang@gmail.com"><i class="bx bx-envelope"></i></a>
       <a href="https://www.facebook.com/kcysrael28/"><i class="bx bxl-facebook"></i></a>
       <a href="#"><i class="bx bxl-twitter"></i></a>
@@ -384,6 +400,8 @@
     <!-- Copyright -->
     <p>&#169; Kyle Cua</p>
   </section>
+</body>
+
   <!--Link Swiper js-->
   <script src="./assets/js/swiper-bundle.min.js"></script>
   <!--Link to JS-->
@@ -512,9 +530,9 @@
 
   </script>
   <script src="./assets/js/particles.min.js"></script>
-
+  <script src="./assets/js/animateView.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
   <!--Sweet alert-->
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-</body>
-
 </html>
