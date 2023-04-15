@@ -4,9 +4,13 @@
 }
 
 .portfolio-content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  // grid-template-columns: repeat(2, 1fr);
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 2rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .portfolio-box {
@@ -131,7 +135,9 @@
     & .modal-body{
       display: flex;
       align-items: center;
+      flex-direction: column;
       justify-content: center;
+      gap: 15px;
       color: var(--container-color);
     }
   }

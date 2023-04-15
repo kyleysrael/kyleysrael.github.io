@@ -1,4 +1,4 @@
-const targets = ["Kyle Cua", "a front-end developer", "web developer"]; // the texts to be animated
+const targets = ["Kyle Cua", "a front-end", "web developer"]; // the texts to be animated
 const delay = 250; // the delay between each character (in milliseconds)
 const target = document.getElementById("typewriter"); // the target element to animate
 

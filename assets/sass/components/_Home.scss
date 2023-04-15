@@ -4,8 +4,8 @@
     align-items: center;
     justify-content: center;
     padding-top: 7rem;
-    margin-bottom: 40px;
     position: relative;
+    z-index: 50;
 }
 
 .home-content{
@@ -126,6 +126,8 @@
   
   #particles-js{
     position: fixed;
+    pointer-events: none;
+    z-index: 0;
     width: 100vw;
     height: 100vh;
   }

@@ -47,12 +47,11 @@
     </div>
   </header>
   <!--Home-->
-  
   <section class="home container" id="home">
     <div class="home-content">
-      <div class="home-img" animated="slideY">
+      <!-- <div class="home-img" animated="slideY">
         <img src="./assets/img/kc.png" alt="" />
-      </div>
+      </div> -->
       <div class="home-text">
         <h3 animated="slideY">Hello</h3>
         <h2>I'm <span class="color" id="typewriter"></span><span class="typewriter-cursor"></span></h2>
@@ -73,12 +72,13 @@
       </div>
     </div>
   </section>
+
   <!--About-->
-  <section class="about container" id="about" animated="staggerChild slideY">
+  <section class="about container" id="about">
     <!--Heading-->
     <h2 class="heading">About</h2>
     <!--About Content-->
-    <div class="about-content">
+    <div class="about-content" animated="slideY">
       <div class="about-data">
         <span>About Me</span>
         <h2>
@@ -103,7 +103,7 @@
           work and exceeding expectations. I am excited to continue building
           my career and making a meaningful impact in the world.
         </p>
-        <p>Get your Project book with contact button.</p>
+        <p>Make your Project with <span class="color"><a href="#contact">contact button.</a></span></p>
       </div>
     </div>
   </section>
@@ -163,7 +163,7 @@
     <!--Portfolio Content-->
     <div class="portfolio-content">
       <div class="portfolio-box">
-        <img src="./assets/img/portfolio-1.webp" alt="" class="portfolio-img" />
+        <img src="https://cdn.pixabay.com/photo/2017/10/31/19/05/web-design-2906159_960_720.jpg" alt="" class="portfolio-img" />
         <!--Overlay-->
         <div class="portfolio-overlay">
           <h2>Web Development</h2>
@@ -204,10 +204,10 @@
       </div>
 
       <div class="portfolio-box">
-        <img src="./assets/img/portfolio-2.webp" alt="" class="portfolio-img" />
+        <img src="https://img1.wallspic.com/previews/9/0/3/3/6/163309/163309-java-microservices-text-graphics-graphic_design-x750.jpg" alt="" class="portfolio-img" />
         <!--Overlay-->
         <div class="portfolio-overlay">
-          <h2>Wordpress</h2>
+          <h2>Java</h2>
           <a href="javascript:void(0)" class="modal-btn2">
             <i class="bx bx-link-alt"></i>
           </a>
@@ -219,55 +219,16 @@
               </div>
               <div class="modal-body">
                 <h1>Coming Soon!</h1>
+                <div class="img-wrapper">
+                  <img src="https://media4.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif?cid=ecf05e47y44818bzkljrm6o9pdplovsz67xxz3lg2lofsjfy&rid=giphy.gif&ct=g" alt="">
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="portfolio-box">
-        <img src="./assets/img/portfolio-3.webp" alt="" class="portfolio-img" />
-        <!--Overlay-->
-        <div class="portfolio-overlay">
-          <h2>Freelance</h2>
-          <a href="javascript:void(0)" id="modal-3">
-            <i class="bx bx-link-alt"></i>
-          </a>
-            <!-- Modal 3 -->
-            <div id="simpleModal-2" class="empty-modal">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <a class="closeBtn" id="emptyClose"><i class='bx bx-arrow-back'></i> Go back</a>
-                </div>
-                <div class="modal-body">
-                  <h1>Coming Soon!</h1>
-                </div>
-              </div>
-            </div>
-        </div>
-      </div>
-
-      <div class="portfolio-box">
-        <img src="./assets/img/portfolio-4.webp" alt="" class="portfolio-img" />
-        <!--Overlay-->
-        <div class="portfolio-overlay">
-          <h2>Others</h2>
-          <a href="javascript:void(0)" id="modal-4">
-            <i class="bx bx-link-alt"></i>
-          </a>
-            <!-- Modal 4 -->
-            <div id="simpleModal-2" class="empty-modal">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <a class="closeBtn" id="emptyClose"><i class='bx bx-arrow-back'></i> Go back</a>
-                </div>
-                <div class="modal-body">
-                  <h1>Coming Soon!</h1>
-                </div>
-              </div>
-            </div>
-        </div>
-      </div>
+      <a href="#" class="btn">Others</a>
 
     </div>   
   </section>
@@ -392,13 +353,13 @@
       <a href="#"><i class="bx bxl-instagram"></i></a>
     </div>
     <!--Footer Links-->
-    <div class="footer-links">
+    <div class="footer-links" animated="staggerChild slideY">
       <a href="#">Privacy Policy</a>
       <a href="#">Terms of Use</a>
       <a href="#">Disclaimer</a>
     </div>
     <!-- Copyright -->
-    <p>&#169; Kyle Cua</p>
+    <p animated="slideY">&#169; Kyle Cua</p>
   </section>
 </body>
 

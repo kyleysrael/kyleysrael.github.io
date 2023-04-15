@@ -136,8 +136,8 @@ header {
   align-items: center;
   justify-content: center;
   padding-top: 7rem;
-  margin-bottom: 40px;
   position: relative;
+  z-index: 50;
 }
 
 .home-content {
@@ -264,6 +264,8 @@ header {
 }
 #particles-js {
   position: fixed;
+  pointer-events: none;
+  z-index: 0;
   width: 100vw;
   height: 100vh;
 }
@@ -336,6 +338,7 @@ header {
 
 .services {
   position: relative;
+  z-index: 50;
 }
 
 .services-box {
@@ -379,9 +382,12 @@ header {
 }
 
 .portfolio-content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 2rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .portfolio-box {
@@ -502,7 +508,9 @@ header {
 .empty-modal > .modal-content .modal-body {
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
+  gap: 15px;
   color: var(--container-color);
 }
 
