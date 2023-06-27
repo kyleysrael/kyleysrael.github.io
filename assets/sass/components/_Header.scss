@@ -1,78 +1,108 @@
-
-/*Heading*/
-
-header{
-    position: fixed;
-    top: 0;
-    left: 0;
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.scrolled {
+    background-color: #111827;
+  }
+  & .container {
     width: 100%;
-    z-index: 100;
-}
+    max-width: 1440px;
+    padding: 16px 64px;
+    @include sm {
+      padding: 16px 24px;
+    }
+    & .wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      white-space: nowrap;
+      & .logo {
+        & a {
+          font-size: 20px;
+        }
+      }
+      .links {
+        display: flex;
+        flex-direction: row;
+        gap: 48px;
+        @include md {
+          display: none;
+        }
+        a {
+          position: relative;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 24px;
+          transition: all 0.2s linear;
+          &:hover {
+            opacity: 0.5;
+            transition: all 0.2s linear;
+          }
+          &:not(:last-child)::after {
+            content: "";
+            background-image: url(/assets/img/Line.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 6px;
+            height: 22px;
+            position: absolute;
+            right: -25px;
+          }
+        }
+      }
 
-.header-active{
-    background: var(--box-color);
-    transition: 0.4s;
-}
-
-.nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 0;
-}
-
-.logo{
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--main-color);
-}
-
-.navbar{
-    display: flex;
-    align-items: center;
-    column-gap: 1.5rem;
-}
-
-.nav-link{
-    font-size: 0.94rem;
-    padding: 4px 8px;
-    border-radius: 0.2rem;
-    color: var(--bg-color);
-}
-
-.nav-link:hover{
-    color: var(--main-color);
-    background: var(--container-color);
-    transition: 0.3s all linear;
-}
-
-/*Menu Icon*/
-.menu-icon{
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 5px;
-    cursor: pointer;
-    z-index: 200;
-    transition: 0.3s;
-}
-
-.menu-icon div{
-    display: block;
-    background-color: var(--bg-color);
-    height: 2px;
-    width: 24px;
-    transition: 0.3s;
-}
-
-.move .line1{
-    transform: rotate(-45deg) translate(-5px, 5px);
-}
-
-.move .line2{
-    opacity: 0;
-}
-
-.move .line3{
-    transform: rotate(45deg) translate(-5px, -5px);
+      & .btn {
+        @include sm {
+          display: none;
+        }
+        & > a {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 8px;
+          &:hover {
+            & .icon {
+              transition: all 0.8s linear;
+              background-color: $white;
+            }
+          }
+          & .icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 100%;
+            border: 1px solid #d1d5db;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            & img {
+              width: 20px;
+              height: 18px;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+      & .mobileMenu {
+        display: none;
+        @include md {
+          display: block;
+        }
+        & a {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 15px;
+        }
+      }
+    }
+  }
 }

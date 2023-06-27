@@ -1,30 +1,36 @@
-/*Google fonts*/
-@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:ital,wght@0,400;0,500;0,600;1,700&display=swap");
+//? screen References
+$screen-lg: 1000;
+$screen-md: 850;
+$screen-sm: 450;
+
 * {
-  font-family: "Poppins", sans-serif;
-  margin: 0;
   padding: 0;
+  font-family: Space Grotesk;
+  margin: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
-  scroll-padding-top: 2rem;
+  text-decoration: none;
+  outline: none;
+  color: white;
 }
-:root {
-  --main-color: #906861;
-  --body-color: #000000; /* black */
-  --container-color: #1c1c1c; /* dark gray */
-  --heading-color: #f5f5f5;
-  --box-color: #0d0d0d;
-  --bg-color: white;
-}
-/* Hide scrollbar for Chrome, Safari and Opera */
-::-webkit-scrollbar {
-  display: none;
+
+*[animated] {
+  opacity: 0;
 }
 
 body {
-  color: var(--bg-color);
-  background: var(--body-color);
-  &.no-scroll{
-    overflow-y: hidden;
-  }
+  // background-image: url(/assets/img/Hero-svg.jpg);
+  background-color: #111827;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#particles-js {
+  position: fixed;
+  width: 100vw;
 }

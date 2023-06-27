@@ -1,382 +1,148 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kyle Cua</title>
-  <meta name="description" content="" />
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="website icon" type="png" href="./assets/img/kc-low-resolution-color-logo-removebg-preview.png">
-  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
+  <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <!--Link to Css Swiper-->
-  <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
-  <!--Box Icon-->
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-
 <body>
+  
   <div id="particles-js">
-    <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="1556" height="1428"></canvas>
+    <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;"></canvas>
   </div>
-  <!--Header-->
   <header>
-    <!--Nav-->
-    <div class="nav container">
-      <!--Logo-->
-      <a href="#" class="logo">Kyle Cua</a>
-      <!--Navbar-->
-      <ul class="navbar">
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#services" class="nav-link">Services</a></li>
-        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-      <!--Menu Icon-->
-      <div class="menu-icon">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
+    <div class="container">
+      <div class="wrapper">
+        <div class="logo">
+          <a href="#">Kyle Cua</a>
+        </div>
+        <nav class="links">
+          <a href="#">Home</a>
+          <a href="#work">My Works</a>
+          <a href="#">About Me</a>
+          <a href="#">Contacts</a>
+          <a href="#">Resources</a>
+        </nav>
+
+        <div class="btn">
+          <a href="#">
+            <div class="icon"><img src="./assets/img/ltLogo.svg" alt=""></div>
+            <span>Let’s Talk</span>
+          </a>
+        </div>
+
+        <div class="mobileMenu">
+          <a href="#"><span>Menu</span><img src="/assets/img/hamburger.svg" alt=""></a>
+        </div>
       </div>
     </div>
   </header>
-  <!--Home-->
-  <section class="home container" id="home">
-    <div class="home-content">
-      <!-- <div class="home-img" animated="slideY">
-        <img src="./assets/img/kc.png" alt="" />
-      </div> -->
-      <div class="home-text">
-        <h3 animated="slideY">Hello</h3>
-        <h2>I'm <span class="color" id="typewriter"></span><span class="typewriter-cursor"></span></h2>
-        <p>
-          I'm an <span class="color" animated="slideX">intern</span> in Manila, Philippines, and
-          I'm 18 years old. I feel very strongly about creating
-          <span class="color" animated="slideY">websites</span> and
-          <span class="color" animated="slideY">applications</span>.<br />
-          Here is some further information
-          <span class="color" animated="slideY">about me.</span>
-        </p>
-        <!--Social-->
-        <div class="social" animated="staggerChild slideX">
-          <a href="#"><i class="bx bxl-facebook"></i></a>
-          <a href="#"><i class="bx bxl-twitter"></i></a>
-          <a href="#"><i class="bx bxl-instagram"></i></a>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="wrapper">
+        <div class="bannerContent" animated="staggerChild slideY">
+          <div class="heading">
+            <h1>Crafting Memorable 
+              User Experiences for 
+              Business Success</h1>
+          </div>
+          <div class="description">
+            <p>I blend exquisite design with impeccable functionality for an exceptional 
+              user experience, while keeping users captivated.</p>
+          </div>
+          <div class="btnContainer">
+            <a href="#" class="btnPrimary">More This Way</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!--About-->
-  <section class="about container" id="about">
-    <!--Heading-->
-    <h2 class="heading">About</h2>
-    <!--About Content-->
-    <div class="about-content" animated="slideY">
-      <div class="about-data">
-        <h2>
-          Web developer and <br />
-          Web Designer
-        </h2>
-        <a href="cv.docx" class="btn" download="">
-          Download Cv
-          <i class="bx bx-download"></i>
-        </a>
-      </div>
-      <div class="about-text">
-        <p>
-          Hi there! My name is Kyle Ysrael A. Cua, and I am a multi-talented
-          creative professional with a passion for web development and graphic
-          design.
-        </p>
-        <p>
-          I am a multi-talented web developer and graphic designer with a
-          strong foundation in both technical and artistic skills. As a
-          freelance professional, I am dedicated to delivering top-quality
-          work and exceeding expectations. I am excited to continue building
-          my career and making a meaningful impact in the world.
-        </p>
-        <p>Make your Project with <span class="color"><a href="#contact">contact button.</a></span></p>
-      </div>
-    </div>
-  </section>
-
-  <!--Services-->
-  <section class="services container" id="services" animated="slideY">
-    <!--Heading-->
-    <h2 class="heading">Services</h2>
-    <!--Services Content-->
-    <div class="services-content" animated="staggerChild slideY">
-      <div class="services-box">
-        <i class="bx bx-code-alt"></i>
-        <h2>Web Development</h2>
-        <p>
-          As a web developer, I have the unique ability to craft and shape the
-          online world. From building beautiful and functional websites to
-          creating intuitive and seamless user experiences, I am constantly
-          pushing the boundaries of what is possible on the web. Whether it's
-          bringing a client's vision to life or solving complex technical
-          challenges, I am always up for the task. I am a web developer, and I
-          am proud to be at the forefront of shaping the digital landscape.
-        </p>
-      </div>
-      <div class="services-box">
-        <i class="bx bx-lock-alt"></i>
-        <h2>Freelance</h2>
-        <p>
-          As a freelancer, I am my own boss and have the freedom to choose the
-          projects and clients that align with my values and goals. With the
-          ability to work remotely and set my own schedule, I am able to
-          pursue my passions and continuously learn and grow as a
-          professional. I am a freelancer, and I am proud to be able to craft
-          my own path and make a meaningful impact in the world.
-        </p>
-      </div>
-      <div class="services-box">
-        <i class="bx bxs-edit"></i>
-        <h2>Wordpress</h2>
-        <p>
-          I am a web designer, using my creativity and technical skills to
-          craft visually stunning and intuitive online experiences. From
-          conceptualizing and designing beautiful websites to creating
-          cohesive and effective branding, I am constantly pushing the
-          boundaries of what is possible in the digital world. Whether it's
-          bringing a client's vision to life or solving complex design
-          challenges, I am always up for the task. I am a web designer, and I
-          am proud to be at the forefront of shaping the online landscape.
-        </p>
-      </div>
-    </div>
-  </section>
-  
-  <!--Portfolio-->
-  <section class="portfolio container" id="portfolio">
-    <h2 class="heading">Portfolio</h2>
-
-    <!--Portfolio Content-->
-    <div class="portfolio-content">
-      <div class="portfolio-box">
-        <img src="https://cdn.pixabay.com/photo/2017/10/31/19/05/web-design-2906159_960_720.jpg" alt="" class="portfolio-img" />
-        <!--Overlay-->
-        <div class="portfolio-overlay">
-          <h2>Web Development</h2>
-          <a class="modal-btn">
-            <i class="bx bx-link-alt"></i>
+  <section class="work" id="work">
+    <div class="container">
+      <div class="wrapper">
+        <div class="workHeading">
+          <div class="content">
+          <h2>My Work</h2>
+          <p>
+            Check out my portfolio showcasing my expertise as a front-end web developer. Click on each project to see my design skills in action.</p>
+          </div>
+          <div class="featured">
+            <a href="#" class="active"><img src="/assets/img/sun.svg" alt="sun"><span>Visual Design</span></a>
+            <a href="#" ><img src="/assets//img/aim.svg" alt="aim"><span>Case Study</span></a>
+            <a href="#" ><img src="/assets/img/star.svg" alt="star"><span>Projects</span></a>
+          </div>
+        </div>
+        <div class="gridWrapper">
+          <a class="card" href="https://quantrics.pixxelabs.com/">
+            <div class="imgContainer">
+              <img src="/assets/img/Quantrics.png" alt="Sample">
+            </div>
+            <div class="description">
+              <div class="text">
+              <div class="heading">Wordpress</div>
+              <div class="preHeader">Quantrics aims to help businesses understand the experiences and opinions of their customers and employees, enabling them to make informed decisions to improve their products, services, and overall organizational performance. It is used by companies across various industries, including market research, retail, healthcare, hospitality, and more.</div>
+              </div>
+              <div class="icon">
+                <img src="/assets/img/shareIcon.svg" alt="share">
+              </div>
+            </div>
           </a>
-          <!-- Modal 1 -->
-          <div id="simpleModal" class="modal">
-            <div class="modal-content">
-              <div class="modal-header">
-                <a class="closeBtn"><i class='bx bx-arrow-back'></i> Go back</a>
+          <a class="card" href="https://staging.husay.co/home">
+            <div class="imgContainer">
+              <img src="/assets/img/Husay.png" alt="Sample">
+            </div>
+            <div class="description">
+              <div class="text">
+              <div class="heading">NextJs</div>
+              <div class="preHeader">Husay.co is a learning-to-earning platform that aims to empower Filipino artists and creative workers to increase their income, establish their profession, and ease their creative process with their clients through online learning and job management features.</div>
               </div>
-              <div class="modal-body">
-                <div class="container">
-                  <div class="grid">
-                    <article>
-                      <img src="/assets/img/mitsu.png" alt="Sample photo">
-                      <div class="text">
-                        <h1>Mitsukoshi Mall BGC</h1>
-                        <p>Mitsukoshi is a Japanese chain of department stores. It has branches throughout Japan and has expanded to East and Southeast Asia and the United States. The first Philippine branch opened on November 18, 2022.</p>
-                        <a href="https://www.mitsukoshi.ph/home/" class="btn">Visit Here!</a>
-                      </div>
-                    </article>
-                    <article>
-                      <img src="/assets/img/quantrics.png" alt="Sample photo">
-                      <div class="text">
-                        <h3>Quantrics</h3>
-                        <p>Quantrics provides in-house IT development, shared services and customer experience for Canada's leading media and telecommunications company and its subsidiary companies.</p>
-                        <a href="https://quantricswebsite.azurewebsites.net/" class="btn">Visit Here!</a>
-                      </div>
-                    </article>
-                  </div>
-                </div>
+              <div class="icon">
+                <img src="/assets/img/shareIcon.svg" alt="share">
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio-box">
-        <img src="https://img1.wallspic.com/previews/9/0/3/3/6/163309/163309-java-microservices-text-graphics-graphic_design-x750.jpg" alt="" class="portfolio-img" />
-        <!--Overlay-->
-        <div class="portfolio-overlay">
-          <h2>Java</h2>
-          <a href="javascript:void(0)" class="modal-btn2">
-            <i class="bx bx-link-alt"></i>
           </a>
-          <!-- Modal 2 -->
-          <div id="simpleModal-2" class="empty-modal">
-            <div class="modal-content">
-              <div class="modal-header">
-                <a class="closeBtn" id="emptyClose"><i class='bx bx-arrow-back'></i> Go back</a>
+          <a class="card" href="https://www.mitsukoshi.ph/home/">
+            <div class="imgContainer">
+              <img src="/assets/img/mitsukoshi.png" alt="Sample">
+            </div>
+            <div class="description">
+              <div class="text">
+              <div class="heading">NextJs</div>
+              <div class="preHeader">Mitsukoshi Mall, also known as Mitsukoshi Department Store, is a well-known retail chain in Japan. Mitsukoshi is one of the oldest and most prestigious department stores in the country, with a history dating back to 1673. It is considered a landmark in the Japanese retail industry.</div>
               </div>
-              <div class="modal-body">
-                <h1>Coming Soon!</h1>
-                <div class="img-wrapper">
-                  <img src="https://media4.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif?cid=ecf05e47y44818bzkljrm6o9pdplovsz67xxz3lg2lofsjfy&rid=giphy.gif&ct=g" alt="">
-                </div>
+              <div class="icon">
+                <img src="/assets/img/shareIcon.svg" alt="share">
               </div>
             </div>
-          </div>
+          </a>
         </div>
-      </div>
-
-      <a href="#" class="btn">Others</a>
-
-    </div>   
-  </section>
-
-  <section class="projects container" id="projects" animated="slideY">
-    <!--Heading-->
-    <h2 class="heading">Projects</h2>
-    <!--Projects Content-->
-    <div class="projects-content" animated="staggerChild slideY">
-      <div class="project-box">
-        <h2>5+</h2>
-        <span>Projects Completed</span>
-      </div>
-      <div class="project-box">
-        <h2>000+</h2>
-        <span>Website Develop</span>
-      </div>
-      <div class="project-box">
-        <h2>000+</h2>
-        <span>Happy Clients</span>
+        <div class="btnContainer">
+          <a href="#" class="btnPrimary">More this way</a>
+        </div>
       </div>
     </div>
   </section>
+</main>
 
-  <!--Review-->
-  <section class="container reviews" id="reviews">
-    <!--Heading-->
-    <h2 class="heading">Reviews</h2>
-    <!-- Review Content-->
-    <div class="reviews-content swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <!-- Review Box -->
-          <div class="review-box">
-            <i class="bx bxs-quote-right"></i>
-            <p class="review-text">
-              I had the pleasure of working with Kyle on a web development
-              project and was consistently impressed by their level of
-              expertise and attention to detail. Kyle has a strong
-              understanding of the latest technologies and a natural talent
-              for design, which was evident in the beautifully crafted website
-              they delivered. He was also a pleasure to work with,
-              consistently going above and beyond to ensure that all of my
-              needs and preferences were met. I would highly recommend to Kyle
-              anyone in need of a talented and reliable web developer and look
-              forward to the opportunity to work with them again in the
-              future.
-            </p>
-            <div class="review-profile">
-              <h2>Althea Denisse</h2>
-              <span>From Korea</span>
-              <img src="./assets/img/review-1.jpg" alt="" />
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <!-- Review Box -->
-          <div class="review-box">
-            <i class="bx bxs-quote-right"></i>
-            <p class="review-text">
-              Working with Kyle as a web developer was a pleasure. Their
-              expertise and attention to detail resulted in a fantastic end
-              product.
-            </p>
-            <div class="review-profile">
-              <h2>Brigs Alfonso</h2>
-              <span>From The Philippines</span>
-              <img src="./assets/img/brigs.jpg" alt="" />
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <!-- Review Box -->
-          <div class="review-box">
-            <i class="bx bxs-quote-right"></i>
-            <p class="review-text">
-              As a business owner, it was important to me to find a web
-              developer who could not only bring my vision to life but also be
-              a reliable and trustworthy partner in the process. Kyle exceeded
-              all of my expectations in that regard. From the very beginning,
-              they took the time to understand my needs and goals, and
-              consistently provided valuable insights and suggestions
-              throughout the project. The end result was a beautifully
-              designed and highly functional website that has already had a
-              positive impact on my business. I am extremely grateful to have
-              had the opportunity to work with him and would highly recommend
-              their services to anyone in need of a top-notch web developer.
-            </p>
-            <div class="review-profile">
-              <h2>Mae Santiago</h2>
-              <span>From America</span>
-              <img src="./assets/img/review-3.jpg" alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
 
-  <!--Contact Form-->
-  <section class="contact contaniner" id="contact">
-    <!--Heading-->
-    <h2 class="heading">Contact</h2>
-    <!--Contact Form-->
-    <form action="" class="contact-form" id="contact-form">
-      <input type="text" placeholder="Your Name" class="name" required />
-      <input type="email" name="" id="" placeholder="Email Address..." class="email" required />
-      <textarea name="" id="" cols="30" rows="10" placeholder="Write mesage here..." class="message"
-        required></textarea>
-      <input type="submit" value="Send" class="send-btn" onclick="sendMail()" />
-    </form>
-  </section>
-
-  <!--Footer-->
-  <section class="footer container" id="footer">
-    <div class="social" animated="staggerChild slideX">
-      <a href="mailto:d3kulang@gmail.com"><i class="bx bx-envelope"></i></a>
-      <a href="https://www.facebook.com/kcysrael28/"><i class="bx bxl-facebook"></i></a>
-      <a href="#"><i class="bx bxl-twitter"></i></a>
-      <a href="#"><i class="bx bxl-instagram"></i></a>
-    </div>
-    <!--Footer Links-->
-    <div class="footer-links" animated="staggerChild slideY">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Use</a>
-      <a href="#">Disclaimer</a>
-    </div>
-    <!-- Copyright -->
-    <p animated="slideY">&#169; Kyle Cua</p>
-  </section>
+  <footer></footer>
 </body>
 
-  <!--Link Swiper js-->
-  <script src="./assets/js/swiper-bundle.min.js"></script>
-  <!--Link to JS-->
-  <script src="./assets/js/script.js" async defer></script>
-  <script src="/assets/js/typewriterEffects.js"></script>
-  <script src="./assets/js/particles.js"></script>
-  <!--Js email-->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
- <script src="/assets/js/modal.js"></script>
-  <script type="text/javascript">
-    (function () {
-      emailjs.init("IR1Jz2JwCPRuIbwPR");
-    })();
-  </script>
-  <script type="text/javascript"> 
+<script src="/assets/js/header.js"></script>
+<script src="/assets/js/animateView.js"></script>
+<script src="/assets/js/script.js"></script>
+<script src="./assets/js/particles.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+<script type="text/javascript"> 
   particlesJS("particles-js", {
   "particles": {
     "number": {
@@ -490,9 +256,7 @@
 
   </script>
   <script src="./assets/js/particles.min.js"></script>
-  <script src="./assets/js/animateView.js"></script>
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+
   <!--Sweet alert-->
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </html>

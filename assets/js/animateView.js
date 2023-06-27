@@ -9,15 +9,9 @@ function animateView() {
   function init(el) {
     var config = el.getAttribute("animated");
     var offset = 40;
-    var xOffset = el.hasAttribute("xOffset")
-      ? el.getAttribute("xOffset")
-      : -offset;
-    var yOffset = el.hasAttribute("yOffset")
-      ? el.getAttribute("yOffset")
-      : offset;
-    var delay = el.hasAttribute("delay")
-      ? parseInt(el.getAttribute("delay"))
-      : 0.25;
+    var xOffset = el.hasAttribute("xOffset") ? el.getAttribute("xOffset") : -offset;
+    var yOffset = el.hasAttribute("yOffset") ? el.getAttribute("yOffset") : offset;
+    var delay = el.hasAttribute("delay") ? parseInt(el.getAttribute("delay")) : 0.25;
     var show = el.hasAttribute("show") ? 1 : 0;
     var isParentElement = config.includes("staggerChild");
     var _el = !isParentElement ? el : el.children;
@@ -51,12 +45,8 @@ function animateView() {
         (animateConfig.autoAlpha = 1),
         (animateConfig.opacity = 1))
       : "";
-    config.includes("slideY")
-      ? ((setConfig.y = yOffset), (animateConfig.y = 0))
-      : "";
-    config.includes("slideX")
-      ? ((setConfig.x = xOffset), (animateConfig.x = 0))
-      : "";
+    config.includes("slideY") ? ((setConfig.y = yOffset), (animateConfig.y = 0)) : "";
+    config.includes("slideX") ? ((setConfig.x = xOffset), (animateConfig.x = 0)) : "";
     config.includes("scale")
       ? ((setConfig.scale = 0),
         (animateConfig.scale = 1),
@@ -94,11 +84,7 @@ function animateView() {
     elementInView(el) ? tween.play() : !ismobile ? tween.restart().pause() : "";
     window.addEventListener("scroll", () => {
       var ismobile = window.innerWidth <= 600;
-      elementInView(el)
-        ? tween.play()
-        : !ismobile
-        ? tween.restart().pause()
-        : "";
+      elementInView(el) ? tween.play() : !ismobile ? tween.restart().pause() : "";
     });
   }
 
@@ -127,11 +113,7 @@ function animateView() {
     tween.restart().pause();
     window.addEventListener("scroll", () => {
       var ismobile = window.innerWidth <= 600;
-      elementInView(el)
-        ? tween.play()
-        : !ismobile
-        ? tween.restart().pause()
-        : "";
+      elementInView(el) ? tween.play() : !ismobile ? tween.restart().pause() : "";
     });
   }
 
@@ -142,25 +124,4 @@ function animateView() {
     el.style.display = "inline-block";
   }
 }
-
-//? detect element is Inview
-const elementInView = (el, offset = 1.25) => {
-  const scroll = window.scrollY || window.pageYOffset;
-  const boundsTop = el.getBoundingClientRect().top + scroll;
-
-  const viewport = {
-    top: scroll,
-    bottom: scroll + window.innerHeight,
-  };
-
-  const bounds = {
-    top: boundsTop,
-    bottom: boundsTop + el.clientHeight,
-  };
-
-  return (
-    (bounds.bottom >= viewport.top && bounds.bottom <= viewport.bottom) ||
-    (bounds.top <= viewport.bottom && bounds.top >= viewport.top)
-  );
-};
 animateView(); // Call the animateView function after the HTML elements have loaded

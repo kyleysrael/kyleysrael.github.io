@@ -1,76 +1,208 @@
-let menu = document.querySelector('.menu-icon');
-let navbar = document.querySelector('.navbar');
+// Declaration
+const initialWidth = window.innerWidth;
+const onLandingPage = onLandingPageFunc();
+const isMobile = isMobileFunc();
+const allowScroll = allowScrollFunc;
+var heroBannerComponent = document.querySelector(".heroBannerComponent");
 
-menu.onclick = () => {
-    navbar.classList.toggle('open-menu')
-    menu.classList.toggle("move");
+const getAllElement = (params, func) => {
+  let arr = document.querySelectorAll(params);
+  arr.forEach((element) => {
+    func(element);
+  });
 };
 
-window.onscroll = () => {
-    navbar.classList.remove('open-menu')
-    menu.classList.remove("move");
+function hideElement(element) {
+  if (Array.isArray(element)) {
+    Array.from(element).forEach((el) => {
+      return (el.style.display = "none");
+    });
+  } else {
+    return (element.style.display = "none");
+  }
+}
+const removeClass = (params, _class) => {
+  params.classList.remove(_class);
+};
+//?delay function
+function delay(func, delay) {
+  setTimeout(func, delay * 1000);
 }
 
-//reviews swiper
-var swiper = new Swiper(".reviews-content", {
-    spaceBetween:30,
-    centeredSlides:true,
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: true,
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-}); 
-
-//Header Background
-
-let header = document.querySelector('header')
-
-window.addEventListener('scroll', () => {
-    header.classList.toggle('header-active', window.scrollY > 0);
-})
-
-function validate(){
-    let name = document.querySelector(".name")
-    let email = document.querySelector(".email")
-    let msg = document.querySelector(".message")
-    let sendBtn = document.querySelector(".send-btn")
-
-    sendBtn.addEventListener('click', (e) =>{
-        e.preventDefault()
-        if(name.value == "" || email.value == "" || msg == ""){
-            emptyerror();
-        } else{
-            sendMail (name.value, email.value, msg.value);
-            success();
-        }
-    })
+//? returns number string with commas
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
-validate()
+//? string to array
+stringToArray = function (str) {
+  return str.trim().split(" ");
+};
 
-function sendMail(name,email,msg){
-    emailjs.send("service_969t1ov","template_lxcmurn",{
-        from_name: email,
-        to_name: name,
-        message: msg,
+//? detect element is Inview
+const elementInView = (el, offset = 1.25) => {
+  const scroll = window.scrollY || window.pageYOffset;
+  const boundsTop = el.getBoundingClientRect().top + scroll;
+
+  const viewport = {
+    top: scroll,
+    bottom: scroll + window.innerHeight,
+  };
+
+  const bounds = {
+    top: boundsTop,
+    bottom: boundsTop + el.clientHeight,
+  };
+
+  return (
+    (bounds.bottom >= viewport.top && bounds.bottom <= viewport.bottom) ||
+    (bounds.top <= viewport.bottom && bounds.top >= viewport.top)
+  );
+};
+
+//? responsive iframe handle
+(function (window, document, undefined) {
+  var players = ['iframe[src*="youtube.com"]', 'iframe[src*="vimeo.com"]'];
+  var fitVids = document.querySelectorAll(players.join(","));
+
+  if (fitVids.length) {
+    // Loop through videos
+    for (var i = 0; i < fitVids.length; i++) {
+      // Get Video Information
+      var fitVid = fitVids[i];
+      var width = fitVid.getAttribute("width");
+      var height = fitVid.getAttribute("height");
+      var aspectRatio = height / width;
+      var parentDiv = fitVid.parentNode;
+
+      // Wrap it in a DIV
+      var div = document.createElement("div");
+      div.className = "videoWrapper";
+      div.style.paddingBottom = aspectRatio * 100 + "%";
+      parentDiv.insertBefore(div, fitVid);
+      fitVid.remove();
+      div.appendChild(fitVid);
+
+      // Clear height/width from fitVid
+      fitVid.removeAttribute("height");
+      fitVid.removeAttribute("width");
+    }
+  }
+})(window, document);
+
+//? handle mobile view on landscape
+function mobileLandscapeHandler() {
+  var mobileLandscapeHandler = document.querySelector(".mobileLandscape");
+  var orientation =
+    (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
+
+  if (initialWidth <= 600) {
+    if (orientation === "landscape-primary" || orientation === "landscape-secondary") {
+      mobileLandscapeHandler.style.display = "flex";
+    } else {
+      mobileLandscapeHandler.style.display = "none";
+    }
+  }
+}
+var btnFileUpload = Array.from(document.querySelectorAll(".btnFileUpload"));
+
+btnFileUpload.forEach((element) => {
+  var imgHolder = element.parentElement;
+  element.addEventListener(
+    "change",
+    () => {
+      var file = element.files[0];
+      var reader = new FileReader();
+      reader.onloadend = function () {
+        imgHolder.style.background =
+          "url(" + reader.result + ") center center/cover no-repeat";
+      };
+      if (file) {
+        reader.readAsDataURL(file);
+      }
+      imgHolder.classList.add("has-image");
+    },
+    true
+  );
+});
+
+function animateBeforeUnload() {
+  var anchorArray = Array.from(document.getElementsByTagName("a"));
+  var preloader = document.querySelector(".preloader");
+  anchorArray.forEach((anchor) => {
+    anchor.addEventListener("click", function (event) {
+      var attr = anchor.getAttribute("href");
+      var target = anchor.hasAttribute("target");
+      if (attr != "#" && !target) {
+        event.preventDefault();
+        gsap.to(preloader, 0.5, {
+          autoAlpha: 1,
+          ease: "expo.in",
+          onComplete: function () {
+            location.href = attr;
+          },
         });
+      }
+    });
+  });
 }
 
-function emptyerror (){
-    swal({
-        title: "Error!",
-        text: "Fields cannot be empty",
-        icon: "error",
-      });
-}
+window.addEventListener("scroll", function () {
+  //   showAppBar();
+});
 
-function success (){
-    swal({
-        title: "Email sent",
-        text: "We try to reply in 24hrs",
-        icon: "success",
+// window.addEventListener("load", function () {
+//   preloader();
+// });
+
+window.addEventListener("beforeunload", function (event) {
+  window.scrollTo(0, 0);
+});
+
+window.addEventListener("orientationchange", function () {
+  if (onLandingPage) mobileLandscapeHandler();
+});
+
+window.addEventListener("resize", function () {
+  // ? Desktop Reload on resize
+  // !isMobile && onLandingPage ? (window.location.href = window.location.href) : "";
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const carousels = document.querySelectorAll(".myCarousel");
+
+  carousels.forEach((element, i) => {
+    const flickityName = `flickity${i}`;
+    window[flickityName] = new Flickity(element, {
+      autoPlay: false,
+      pauseAutoPlayOnHover: true,
+      pageDots: true,
+      draggable: true,
+      selectedAttraction: 0.015,
+      friction: 0.25,
+      initialIndex: 0,
+      wrapAround: true,
+      prevNextButtons: false,
+      cellAlign: "left",
+      imagesLoaded: true,
+      adaptiveHeight: true,
+    });
+
+    if (element.classList.contains("withNav")) {
+      const nav = element.nextElementSibling;
+      const btnPrev = nav.querySelector(`.btnPrevCarousel`);
+      const btnNext = nav.querySelector(`.btnNextCarousel`);
+
+      btnPrev.addEventListener("click", (event) => {
+        event.preventDefault();
+        window[flickityName].previous();
       });
-}
+      btnNext.addEventListener("click", (event) => {
+        event.preventDefault();
+        window[flickityName].next();
+      });
+      window[flickityName].x = 0;
+    }
+  });
+
+  animateBeforeUnload();
+});

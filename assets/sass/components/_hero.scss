@@ -1,0 +1,36 @@
+section {
+  &.hero {
+    & .container {
+      padding-top: 150px;
+      @include sm {
+        padding-top: 100px;
+      }
+      & .wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & .bannerContent {
+          width: 100%;
+          max-width: 682px;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 28px;
+          @include sm {
+            gap: 20px;
+          }
+          & .heading {
+            color: $primary;
+            & h1 {
+              @include sm {
+                font-size: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

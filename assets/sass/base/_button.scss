@@ -1,0 +1,29 @@
+a {
+  &.btnPrimary {
+    padding: 16px 32px;
+    border-radius: 12px;
+    background-color: $secondary;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    &::after {
+      content: "";
+      background-image: url(/assets/img/arrow.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 24px;
+      align-items: center;
+      height: 18px;
+      margin-left: 8px;
+
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+      &::after {
+        margin-left: 16px;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+}
