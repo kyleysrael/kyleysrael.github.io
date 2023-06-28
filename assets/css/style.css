@@ -149,6 +149,7 @@ a.btnPrimary:hover::after {
 
 .skeleton {
   position: relative;
+  margin-bottom: 8px;
 }
 .skeleton::before {
   content: "";
@@ -160,6 +161,7 @@ a.btnPrimary:hover::after {
   z-index: 3;
   background: linear-gradient(90deg, #ffffff, gray, #ffffff);
   background-size: 200%;
+  border-radius: 8px;
   animation: skeleton 1s infinite reverse;
 }
 
@@ -169,6 +171,52 @@ a.btnPrimary:hover::after {
   }
   100% {
     background-position: 100% 0;
+  }
+}
+body .loading-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #0f1624, #6c4bef, #0f1624);
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  color: #191654;
+  overflow-y: hidden;
+}
+body .loading-page svg {
+  height: 150px;
+  width: 150px;
+  stroke: white;
+  fill-opacity: 0;
+  stroke-width: 3px;
+  stroke-dasharray: 4500;
+  animation: draw 8s ease;
+}
+body .loading-page .name-container {
+  height: 30px;
+  overflow: hidden;
+}
+body .loading-page .name-container .logo-name {
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 12px;
+  text-transform: uppercase;
+  margin-left: 20px;
+  font-weight: bolder;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 4500;
+  }
+  100% {
+    stroke-dashoffset: 0;
   }
 }
 section {

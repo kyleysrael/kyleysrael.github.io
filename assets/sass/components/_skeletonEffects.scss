@@ -1,5 +1,6 @@
 .skeleton {
   position: relative;
+  margin-bottom: 8px;
   &::before {
     content: "";
     position: absolute;
@@ -10,6 +11,7 @@
     z-index: 3;
     background: linear-gradient(90deg, $white, gray, $white);
     background-size: 200%;
+    border-radius: 8px;
     animation: skeleton 1s infinite reverse;
   }
 }
