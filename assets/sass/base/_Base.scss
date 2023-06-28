@@ -24,6 +24,7 @@ body {
   background-position: center;
   background-size: cover;
   scroll-behavior: smooth;
+  position: relative;
 }
 
 html {
@@ -33,4 +34,5 @@ html {
 #particles-js {
   position: fixed;
   width: 100vw;
+  height: 100vh;
 }

@@ -18,6 +18,7 @@ body {
   background-position: center;
   background-size: cover;
   scroll-behavior: smooth;
+  position: relative;
 }
 
 html {
@@ -27,6 +28,7 @@ html {
 #particles-js {
   position: fixed;
   width: 100vw;
+  height: 100vh;
 }
 
 a {
@@ -192,8 +194,13 @@ header .container .wrapper {
   align-items: center;
   white-space: nowrap;
 }
-header .container .wrapper .logo a {
-  font-size: 20px;
+header .container .wrapper .logo {
+  width: 150px;
+  height: 40px;
+}
+header .container .wrapper .logo a img {
+  width: 100%;
+  height: 100%;
 }
 header .container .wrapper .links {
   display: flex;
@@ -269,6 +276,60 @@ header .container .wrapper .mobileMenu a {
   flex-direction: row;
   align-items: center;
   gap: 15px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+footer .container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 25px 64px;
+}
+@media (max-width: 450px) {
+  footer .container {
+    padding: 25px 24px;
+  }
+}
+footer .container .wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 450px) {
+  footer .container .wrapper {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+footer .container .wrapper .legal {
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: -0.32px;
+}
+footer .container .wrapper .footerLinks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+footer .container .wrapper .footerLinks a .bx {
+  color: #111827;
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  transition: 0.3s all ease-in-out;
+}
+footer .container .wrapper .footerLinks a .bx:hover {
+  background: #6c4bef;
+  color: #ffffff;
+  transition: 0.3s all ease-in-out;
 }
 
 section.hero .container {
