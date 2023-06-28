@@ -29,6 +29,21 @@ section {
               }
             }
           }
+          & .tools {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            & .bx {
+              color: $primary;
+              border: solid 1px $primary;
+              font-size: 28px;
+              padding: 8px;
+              border-radius: 50%;
+              background: transparent;
+            }
+          }
         }
       }
     }

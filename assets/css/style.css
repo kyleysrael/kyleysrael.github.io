@@ -172,9 +172,10 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #111827;
 }
 header.scrolled {
-  background-color: #111827;
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.12);
 }
 header .container {
   width: 100%;
@@ -236,7 +237,7 @@ header .container .wrapper .links a:hover {
   opacity: 0.5;
   transition: all 0.2s linear;
 }
-header .container .wrapper .links a:not(:last-child)::after {
+header .container .wrapper .links a:not(:nth-child(5))::after {
   content: "";
   background-image: url(/assets/img/Line.svg);
   background-repeat: no-repeat;
@@ -248,9 +249,41 @@ header .container .wrapper .links a:not(:last-child)::after {
   right: -25px;
 }
 @media (max-width: 850px) {
-  header .container .wrapper .links a:not(:last-child)::after {
+  header .container .wrapper .links a:not(:nth-child(5))::after {
     display: none;
   }
+}
+header .container .wrapper .links .btn {
+  display: none;
+}
+@media (max-width: 450px) {
+  header .container .wrapper .links .btn {
+    display: block;
+  }
+}
+header .container .wrapper .links .btn > a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+header .container .wrapper .links .btn > a:hover .icon {
+  transition: all 0.3s linear;
+  background-color: #ffffff;
+}
+header .container .wrapper .links .btn > a .icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  border: 1px solid #d1d5db;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .container .wrapper .links .btn > a .icon img {
+  width: 18px;
+  height: 16px;
+  object-fit: contain;
 }
 @media (max-width: 450px) {
   header .container .wrapper .btn {
@@ -264,7 +297,7 @@ header .container .wrapper .btn > a {
   gap: 8px;
 }
 header .container .wrapper .btn > a:hover .icon {
-  transition: all 0.8s linear;
+  transition: all 0.3s linear;
   background-color: #ffffff;
 }
 header .container .wrapper .btn > a .icon {
@@ -430,6 +463,21 @@ section.hero .container .wrapper .bannerContent .heading {
     font-size: 30px;
   }
 }
+section.hero .container .wrapper .bannerContent .tools {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+section.hero .container .wrapper .bannerContent .tools .bx {
+  color: #e5e7eb;
+  border: solid 1px #e5e7eb;
+  font-size: 28px;
+  padding: 8px;
+  border-radius: 50%;
+  background: transparent;
+}
 
 section .container .wrapper {
   width: 100%;
@@ -525,16 +573,22 @@ section .container .wrapper .gridWrapper .card .description .text {
 @media (max-width: 450px) {
   section .container .wrapper .gridWrapper .card .description .text {
     font-size: 16px;
+    max-width: 280px;
     font-weight: 500;
     line-height: 24px;
   }
 }
-section .container .wrapper .gridWrapper .card .description .text .preHeader {
+section .container .wrapper .gridWrapper .card .description .text .content {
   opacity: 0.7;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+section .container .wrapper .gridWrapper .card .description .text .preHeader {
+  font-size: 15px;
+  font-weight: 700;
+  color: #eab308;
 }
 section .container .wrapper .gridWrapper .card .description .text .heading {
   font-size: 25px;

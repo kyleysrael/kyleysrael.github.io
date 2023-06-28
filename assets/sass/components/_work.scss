@@ -87,17 +87,23 @@ section {
               line-height: 28px;
               @include sm {
                 font-size: 16px;
+                max-width: 280px;
                 font-weight: 500;
                 line-height: 24px;
               }
-              & .preHeader {
+              & .content {
                 opacity: 0.7;
                 display: -webkit-box;
                 -webkit-line-clamp: 3;
                 -webkit-box-orient: vertical;
                 overflow: hidden;
               }
-              & .heading {
+              & .preHeader {
+                font-size: 15px;
+                font-weight: 700;
+                color: $yellow;
+              }
+              .heading {
                 font-size: 25px;
                 font-weight: 700;
               }

@@ -7,8 +7,9 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #111827;
   &.scrolled {
-    background-color: #111827;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.12);
   }
   & .container {
     width: 100%;
@@ -64,7 +65,7 @@ header {
             opacity: 0.5;
             transition: all 0.2s linear;
           }
-          &:not(:last-child)::after {
+          &:not(:nth-child(5))::after {
             content: "";
             background-image: url(/assets/img/Line.svg);
             background-repeat: no-repeat;
@@ -76,6 +77,38 @@ header {
             right: -25px;
             @include md {
               display: none;
+            }
+          }
+        }
+        & .btn {
+          display: none;
+          @include sm {
+            display: block;
+          }
+          & > a {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 8px;
+            &:hover {
+              & .icon {
+                transition: all 0.3s linear;
+                background-color: $white;
+              }
+            }
+            & .icon {
+              width: 35px;
+              height: 35px;
+              border-radius: 100%;
+              border: 1px solid #d1d5db;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              & img {
+                width: 18px;
+                height: 16px;
+                object-fit: contain;
+              }
             }
           }
         }
@@ -92,7 +125,7 @@ header {
           gap: 8px;
           &:hover {
             & .icon {
-              transition: all 0.8s linear;
+              transition: all 0.3s linear;
               background-color: $white;
             }
           }
