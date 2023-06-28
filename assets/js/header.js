@@ -10,3 +10,22 @@ window.addEventListener("scroll", function () {
     }
   });
 });
+
+const menu = document.querySelector(".mobileMenu");
+const menuBtn = document.querySelector(".menuIcon");
+const navLinks = document.querySelector(".links");
+
+menu.onclick = (e) => {
+  e.preventDefault();
+  navLinks.classList.toggle("active");
+  menuBtn.classList.toggle("move");
+};
+
+// Close mobile menu when clicking on a link
+const links = document.querySelectorAll(".links a");
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+    menuBtn.classList.remove("move");
+  });
+});

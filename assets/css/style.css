@@ -209,8 +209,21 @@ header .container .wrapper .links {
 }
 @media (max-width: 850px) {
   header .container .wrapper .links {
-    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #111827;
+    width: 40%;
+    height: 100vh;
+    z-index: 5;
+    right: -200px;
+    top: 72px;
+    align-items: center;
+    transition: 0.3s all ease-in-out;
   }
+}
+header .container .wrapper .links.active {
+  transition: 0.3s all ease-in-out;
+  right: 0;
 }
 header .container .wrapper .links a {
   position: relative;
@@ -233,6 +246,11 @@ header .container .wrapper .links a:not(:last-child)::after {
   height: 22px;
   position: absolute;
   right: -25px;
+}
+@media (max-width: 850px) {
+  header .container .wrapper .links a:not(:last-child)::after {
+    display: none;
+  }
 }
 @media (max-width: 450px) {
   header .container .wrapper .btn {
@@ -276,6 +294,50 @@ header .container .wrapper .mobileMenu a {
   flex-direction: row;
   align-items: center;
   gap: 15px;
+  transition: 0.3s ease-out;
+}
+header .container .wrapper .mobileMenu a:hover > span {
+  opacity: 0.8;
+  transition: 0.3s ease-in;
+}
+header .container .wrapper .mobileMenu a .menuIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 4.5px;
+  cursor: pointer;
+  z-index: 200;
+  transition: 0.3s all ease-in-out;
+}
+header .container .wrapper .mobileMenu a .menuIcon div {
+  background-color: #ffffff;
+  height: 2px;
+  width: 24px;
+  transition: 0.3s all ease-in-out;
+}
+header .container .wrapper .mobileMenu a .menuIcon div:nth-child(1) {
+  width: 15px;
+}
+header .container .wrapper .mobileMenu a .menuIcon div:nth-child(3) {
+  width: 15px;
+}
+header .container .wrapper .mobileMenu a .menuIcon.move {
+  row-gap: 5px;
+}
+header .container .wrapper .mobileMenu a .menuIcon.move div:nth-child(1) {
+  width: 24px;
+}
+header .container .wrapper .mobileMenu a .menuIcon.move div:nth-child(3) {
+  width: 24px;
+}
+header .container .wrapper .mobileMenu a .menuIcon.move .line1 {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+header .container .wrapper .mobileMenu a .menuIcon.move .line2 {
+  opacity: 0;
+}
+header .container .wrapper .mobileMenu a .menuIcon.move .line3 {
+  transform: rotate(45deg) translate(-5px, -5px);
 }
 
 footer {
