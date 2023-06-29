@@ -12,6 +12,13 @@ section {
           gap: 12px;
           width: 100%;
           max-width: 50%;
+          @include md {
+            max-width: 100%;
+            @include sm {
+              max-width: 100%;
+              text-align: center;
+            }
+          }
           & h1 {
             color: $secondary;
           }
@@ -20,6 +27,10 @@ section {
           display: flex;
           flex-direction: column;
           gap: 12px;
+          @include sm {
+            justify-content: center;
+            align-items: center;
+          }
           & .bx {
             font-size: 18px;
             display: flex;
@@ -30,10 +41,13 @@ section {
         }
         & form {
           width: 100%;
-          //   max-width: 600px;
           display: flex;
           flex-direction: column;
           gap: 12px;
+          @include sm {
+            justify-content: center;
+            align-items: center;
+          }
           & input,
           textarea {
             border: none;
@@ -43,6 +57,9 @@ section {
             background: $black;
             border-radius: 0.4rem;
             font-size: 15px;
+            @include sm {
+              width: 100%;
+            }
           }
           & .sendBtn {
             width: 100%;

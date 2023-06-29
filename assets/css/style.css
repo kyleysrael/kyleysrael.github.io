@@ -711,6 +711,17 @@ section.contactForm .container .wrapper .heading {
   width: 100%;
   max-width: 50%;
 }
+@media (max-width: 950px) {
+  section.contactForm .container .wrapper .heading {
+    max-width: 100%;
+  }
+}
+@media (max-width: 950px) and (max-width: 470px) {
+  section.contactForm .container .wrapper .heading {
+    max-width: 100%;
+    text-align: center;
+  }
+}
 section.contactForm .container .wrapper .heading h1 {
   color: #6c4bef;
 }
@@ -718,6 +729,12 @@ section.contactForm .container .wrapper .info {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+@media (max-width: 470px) {
+  section.contactForm .container .wrapper .info {
+    justify-content: center;
+    align-items: center;
+  }
 }
 section.contactForm .container .wrapper .info .bx {
   font-size: 18px;
@@ -732,6 +749,12 @@ section.contactForm .container .wrapper form {
   flex-direction: column;
   gap: 12px;
 }
+@media (max-width: 470px) {
+  section.contactForm .container .wrapper form {
+    justify-content: center;
+    align-items: center;
+  }
+}
 section.contactForm .container .wrapper form input,
 section.contactForm .container .wrapper form textarea {
   border: none;
@@ -741,6 +764,12 @@ section.contactForm .container .wrapper form textarea {
   background: #0f1624;
   border-radius: 0.4rem;
   font-size: 15px;
+}
+@media (max-width: 470px) {
+  section.contactForm .container .wrapper form input,
+  section.contactForm .container .wrapper form textarea {
+    width: 100%;
+  }
 }
 section.contactForm .container .wrapper form .sendBtn {
   width: 100%;
