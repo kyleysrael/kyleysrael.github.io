@@ -50,12 +50,12 @@ h1 {
   letter-spacing: -1.28px;
   color: var(--gray-200, #e5e7eb);
 }
-@media (max-width: 850px) {
+@media (max-width: 950px) {
   h1 {
     font-size: 48px;
   }
 }
-@media (max-width: 850px) and (max-width: 450px) {
+@media (max-width: 950px) and (max-width: 470px) {
   h1 {
     font-size: 28px;
     line-height: 36px;
@@ -70,7 +70,7 @@ h2 {
   letter-spacing: -0.8px;
   color: var(--gray-200, #e5e7eb);
 }
-@media (max-width: 450px) {
+@media (max-width: 470px) {
   h2 {
     font-size: 24px;
     font-weight: 700;
@@ -109,7 +109,7 @@ p {
   letter-spacing: -0.4px;
   color: var(--gray-300, #d1d5db);
 }
-@media (max-width: 450px) {
+@media (max-width: 470px) {
   p {
     font-size: 16px;
     line-height: 24px;
@@ -231,7 +231,7 @@ section .container {
   max-width: 1440px;
   padding: 50px 64px;
 }
-@media (max-width: 450px) {
+@media (max-width: 470px) {
   section .container {
     padding: 25px 24px;
   }
@@ -242,7 +242,7 @@ section .container .wrapper {
 
 header {
   width: 100%;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   z-index: 5;
@@ -259,7 +259,7 @@ header .container {
   max-width: 1440px;
   padding: 16px 64px;
 }
-@media (max-width: 450px) {
+@media (max-width: 470px) {
   header .container {
     padding: 16px 24px;
   }
@@ -285,7 +285,7 @@ header .container .wrapper .links {
   flex-direction: row;
   gap: 48px;
 }
-@media (max-width: 850px) {
+@media (max-width: 950px) {
   header .container .wrapper .links {
     flex-direction: column;
     position: absolute;
@@ -293,7 +293,7 @@ header .container .wrapper .links {
     width: 40%;
     height: 100vh;
     z-index: 5;
-    right: -200px;
+    right: -400px;
     top: 72px;
     align-items: center;
     transition: 0.3s all ease-in-out;
@@ -325,7 +325,7 @@ header .container .wrapper .links a:not(:nth-child(5))::after {
   position: absolute;
   right: -25px;
 }
-@media (max-width: 850px) {
+@media (max-width: 950px) {
   header .container .wrapper .links a:not(:nth-child(5))::after {
     display: none;
   }
@@ -333,7 +333,7 @@ header .container .wrapper .links a:not(:nth-child(5))::after {
 header .container .wrapper .links .btn {
   display: none;
 }
-@media (max-width: 450px) {
+@media (max-width: 470px) {
   header .container .wrapper .links .btn {
     display: block;
   }
@@ -362,7 +362,7 @@ header .container .wrapper .links .btn > a .icon img {
   height: 16px;
   object-fit: contain;
 }
-@media (max-width: 450px) {
+@media (max-width: 470px) {
   header .container .wrapper .btn {
     display: none;
   }
@@ -394,7 +394,7 @@ header .container .wrapper .btn > a .icon img {
 header .container .wrapper .mobileMenu {
   display: none;
 }
-@media (max-width: 850px) {
+@media (max-width: 950px) {
   header .container .wrapper .mobileMenu {
     display: block;
   }
@@ -461,7 +461,7 @@ footer .container {
   max-width: 1440px;
   padding: 25px 64px;
 }
-@media (max-width: 450px) {
+@media (max-width: 470px) {
   footer .container {
     padding: 25px 24px;
   }
@@ -473,7 +473,7 @@ footer .container .wrapper {
   justify-content: space-between;
   align-items: center;
 }
-@media (max-width: 450px) {
+@media (max-width: 470px) {
   footer .container .wrapper {
     flex-direction: column;
     gap: 8px;
@@ -507,7 +507,7 @@ footer .container .wrapper .footerLinks a .bx:hover {
 section.hero .container {
   padding-top: 150px;
 }
-@media (max-width: 450px) {
+@media (max-width: 470px) {
   section.hero .container {
     padding-top: 100px;
   }
@@ -527,7 +527,7 @@ section.hero .container .wrapper .bannerContent {
   align-items: center;
   gap: 28px;
 }
-@media (max-width: 450px) {
+@media (max-width: 470px) {
   section.hero .container .wrapper .bannerContent {
     gap: 20px;
   }
@@ -535,7 +535,7 @@ section.hero .container .wrapper .bannerContent {
 section.hero .container .wrapper .bannerContent .heading {
   color: #e5e7eb;
 }
-@media (max-width: 450px) {
+@media (max-width: 470px) {
   section.hero .container .wrapper .bannerContent .heading h1 {
     font-size: 30px;
   }
@@ -568,7 +568,7 @@ section .container .wrapper .workHeading {
   justify-content: space-between;
   align-items: flex-end;
 }
-@media (max-width: 850px) {
+@media (max-width: 950px) {
   section .container .wrapper .workHeading {
     flex-direction: column;
     align-items: center;
@@ -589,7 +589,7 @@ section .container .wrapper .workHeading .featured {
   gap: 40px;
   align-items: center;
 }
-@media (max-width: 450px) {
+@media (max-width: 470px) {
   section .container .wrapper .workHeading .featured {
     gap: 30px;
   }
@@ -611,7 +611,7 @@ section .container .wrapper .gridWrapper {
   gap: 32px;
   position: relative;
 }
-@media (max-width: 450px) {
+@media (max-width: 470px) {
   section .container .wrapper .gridWrapper {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
@@ -639,7 +639,11 @@ section .container .wrapper .gridWrapper .card .description {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
+}
+@media (max-width: 470px) {
+  section .container .wrapper .gridWrapper .card .description {
+    gap: 50px;
+  }
 }
 section .container .wrapper .gridWrapper .card .description .text {
   width: 100%;
@@ -647,8 +651,11 @@ section .container .wrapper .gridWrapper .card .description .text {
   font-size: 18px;
   font-weight: 500;
   line-height: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
-@media (max-width: 450px) {
+@media (max-width: 470px) {
   section .container .wrapper .gridWrapper .card .description .text {
     font-size: 16px;
     max-width: 280px;
@@ -687,6 +694,49 @@ section .container .wrapper .btnContainer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+section.contactForm .container .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+section.contactForm .container .wrapper .heading {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 40%;
+}
+section.contactForm .container .wrapper .heading h1 {
+  color: #6c4bef;
+}
+section.contactForm .container .wrapper form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+section.contactForm .container .wrapper form input,
+section.contactForm .container .wrapper form textarea {
+  border: none;
+  outline: none;
+  padding: 15px;
+  color: #e5e7eb;
+  background: #0f1624;
+  border-radius: 0.4rem;
+  font-size: 15px;
+}
+section.contactForm .container .wrapper form .sendBtn {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 14px;
+  cursor: pointer;
+}
+section.contactForm .container .wrapper form .sendBtn:hover {
+  background-color: #e5e7eb;
+  color: #0f1624;
+  transition: 0.3s all linear;
 }
 
 /*# sourceMappingURL=style.css.map */

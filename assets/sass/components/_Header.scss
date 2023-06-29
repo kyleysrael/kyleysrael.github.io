@@ -1,6 +1,6 @@
 header {
   width: 100%;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   z-index: 5;
@@ -46,7 +46,7 @@ header {
           width: 40%;
           height: 100vh;
           z-index: 5;
-          right: -200px;
+          right: -400px;
           top: 72px;
           align-items: center;
           transition: 0.3s all ease-in-out;

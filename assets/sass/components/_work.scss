@@ -79,13 +79,18 @@ section {
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            gap: 12px;
+            @include sm {
+              gap: 50px;
+            }
             & .text {
               width: 100%;
               max-width: 300px;
               font-size: 18px;
               font-weight: 500;
               line-height: 28px;
+              display: flex;
+              flex-direction: column;
+              gap: 5px;
               @include sm {
                 font-size: 16px;
                 max-width: 280px;

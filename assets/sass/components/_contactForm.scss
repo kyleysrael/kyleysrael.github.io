@@ -1,0 +1,49 @@
+section {
+  &.contactForm {
+    & .container {
+      & .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        & .heading {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          width: 100%;
+          max-width: 40%;
+          & h1 {
+            color: $secondary;
+          }
+        }
+        & form {
+          width: 100%;
+          //   max-width: 600px;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          & input,
+          textarea {
+            border: none;
+            outline: none;
+            padding: 15px;
+            color: $primary;
+            background: $black;
+            border-radius: 0.4rem;
+            font-size: 15px;
+          }
+          & .sendBtn {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 14px;
+            cursor: pointer;
+            &:hover {
+              background-color: $primary;
+              color: $black;
+              transition: 0.3s all linear;
+            }
+          }
+        }
+      }
+    }
+  }
+}
