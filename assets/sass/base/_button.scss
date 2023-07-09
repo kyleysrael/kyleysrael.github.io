@@ -6,6 +6,7 @@ a {
     position: relative;
     display: inline-flex;
     align-items: center;
+    overflow: hidden;
     &::after {
       content: "";
       background-image: url(/assets/img/arrow.svg);
@@ -16,13 +17,31 @@ a {
       align-items: center;
       height: 18px;
       margin-left: 8px;
-
       transition: all 0.3s ease-in-out;
     }
     &:hover {
       &::after {
         margin-left: 16px;
         transition: all 0.3s ease-in-out;
+      }
+    }
+    &.withArrowDown {
+      &::after {
+        content: "";
+        background-image: url(/assets/img/arrowdown.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 15px;
+        align-items: center;
+        height: 15px;
+        margin-left: 8px;
+        transition: all 0.3s ease-in-out;
+      }
+      &:focus {
+        &::after {
+          transform: translateY(50px);
+        }
       }
     }
   }
