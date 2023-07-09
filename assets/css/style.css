@@ -949,4 +949,42 @@ section.about .container .wrapper .content .numbers .col span {
   color: #6c4bef;
 }
 
+section.blog {
+  padding-top: 80px;
+}
+section.blog .container .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+section.blog .container .wrapper .heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+section.blog .container .wrapper .imgWrapper {
+  width: 100%;
+  height: 600px;
+}
+section.blog .container .wrapper .imgWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section.blog .container .wrapper .content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+section.blog .container .wrapper .content ul,
+section.blog .container .wrapper .content ol {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+section.blog .container .wrapper .content h4 {
+  text-transform: uppercase;
+}
+
 /*# sourceMappingURL=style.css.map */
