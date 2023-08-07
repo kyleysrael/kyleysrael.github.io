@@ -28,13 +28,13 @@ a {
     &.withArrowDown {
       &::after {
         content: "";
-        background-image: url(/assets/img/arrowdown.png);
+        background-image: url(/assets/img/downloadBtn.png);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        width: 15px;
+        width: 18px;
         align-items: center;
-        height: 15px;
+        height: 20px;
         margin-left: 8px;
         transition: all 0.3s ease-in-out;
       }

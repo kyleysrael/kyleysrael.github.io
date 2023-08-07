@@ -1,9 +1,5 @@
 // Declaration
 const initialWidth = window.innerWidth;
-const onLandingPage = onLandingPageFunc();
-const isMobile = isMobileFunc();
-const allowScroll = allowScrollFunc;
-var heroBannerComponent = document.querySelector(".heroBannerComponent");
 
 const getAllElement = (params, func) => {
   let arr = document.querySelectorAll(params);
@@ -125,26 +121,26 @@ btnFileUpload.forEach((element) => {
   );
 });
 
-function animateBeforeUnload() {
-  var anchorArray = Array.from(document.getElementsByTagName("a"));
-  var preloader = document.querySelector(".preloader");
-  anchorArray.forEach((anchor) => {
-    anchor.addEventListener("click", function (event) {
-      var attr = anchor.getAttribute("href");
-      var target = anchor.hasAttribute("target");
-      if (attr != "#" && !target) {
-        event.preventDefault();
-        gsap.to(preloader, 0.5, {
-          autoAlpha: 1,
-          ease: "expo.in",
-          onComplete: function () {
-            location.href = attr;
-          },
-        });
-      }
-    });
-  });
-}
+// function animateBeforeUnload() {
+//   var anchorArray = Array.from(document.getElementsByTagName("a"));
+//   var preloader = document.querySelector(".preloader");
+//   anchorArray.forEach((anchor) => {
+//     anchor.addEventListener("click", function (event) {
+//       var attr = anchor.getAttribute("href");
+//       var target = anchor.hasAttribute("target");
+//       if (attr != "#" && !target) {
+//         event.preventDefault();
+//         gsap.to(preloader, 0.5, {
+//           autoAlpha: 1,
+//           ease: "expo.in",
+//           onComplete: function () {
+//             location.href = attr;
+//           },
+//         });
+//       }
+//     });
+//   });
+// }.
 
 window.addEventListener("scroll", function () {
   //   showAppBar();
@@ -154,9 +150,9 @@ window.addEventListener("scroll", function () {
 //   preloader();
 // });
 
-window.addEventListener("beforeunload", function (event) {
-  window.scrollTo(0, 0);
-});
+// window.addEventListener("beforeunload", function (event) {
+//   window.scrollTo(0, 0);
+// });
 
 window.addEventListener("orientationchange", function () {
   if (onLandingPage) mobileLandscapeHandler();
@@ -177,10 +173,10 @@ document.addEventListener("DOMContentLoaded", () => {
       pauseAutoPlayOnHover: true,
       pageDots: true,
       draggable: true,
-      selectedAttraction: 0.015,
-      friction: 0.25,
+      // selectedAttraction: 0.015,
+      // friction: 0.25,
       initialIndex: 0,
-      wrapAround: true,
+      // wrapAround: true,
       prevNextButtons: false,
       cellAlign: "left",
       imagesLoaded: true,
@@ -204,5 +200,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  animateBeforeUnload();
+  // animateBeforeUnload();
 });

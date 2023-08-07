@@ -124,4 +124,4 @@ function animateView() {
     el.style.display = "inline-block";
   }
 }
-animateView();
+animateView(); // Call the animateView function after the HTML elements have loaded

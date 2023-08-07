@@ -4,20 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kyle Cua</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/flickity-fade@2/flickity-fade.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
 <body>
-  <div class="loading-page">
-    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M329.1 142.9c-62.5-62.5-155.8-62.5-218.3 0s-62.5 163.8 0 226.3s155.8 62.5 218.3 0c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3c-87.5 87.5-221.3 87.5-308.8 0s-87.5-229.3 0-316.8s221.3-87.5 308.8 0c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0z"/></svg>
-    <div class="name-container">
-        <div class="logo-name">Kyle</div>
-    </div>
-  </div>
   <div id="particles-js">
     <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;"></canvas>
   </div>
@@ -98,11 +94,12 @@
       <div class="wrapper">
         <div class="workHeading">
           <div class="content">
-          <h2>My Portfolio</h2>
-          <p>
-            Check out my portfolio showcasing my expertise as a front-end web developer. Click on each project to see my coding skills in action.</p>
+          <h2 animated="slideX">My Portfolio</h2>
+          <p animated="slideY">
+            Check out my portfolio showcasing my expertise as a front-end web developer. Click on each project to see my coding skills in action.
+          </p>
           </div>
-          <div class="featured">
+          <div class="featured" animated="staggerChild slideX">
             <a href="#" class="active"><img src="/assets/img/sun.svg" alt="sun"><span>Visual Design</span></a>
             <a href="#" ><img src="/assets//img/aim.svg" alt="aim"><span>Case Study</span></a>
             <a href="#" ><img src="/assets/img/star.svg" alt="star"><span>Projects</span></a>
@@ -165,22 +162,22 @@
   <section class="about" id="about">
     <div class="container">
       <div class="wrapper">
-        <div class="heading">
+        <div class="heading" animated="staggerChild slideY">
           <h5>Kyle Cua</h5>
           <h1>Front-end Web Developer</h1>
         </div>
         <div class="content">
-          <div class="text">
+          <div class="text" animated="staggerChild slideY">
             <h6>Welcome to my portfolio!</h6>
             <p>I am a passionate front-end web developer dedicated to creating stunning and user-friendly websites. With a keen eye for design and a strong understanding of web development technologies, I bring ideas to life through clean and efficient code.</p>
           </div>
           <div class="numbers">
             <div class="col">
-              <span>Projects Completed</span>
+              <span animated="slideX">Projects Completed</span>
               4+
             </div>
-            <div class="col">
-              <span>Experience</span>
+            <div class="col" animated="staggerChild slideX">
+              <span animated="slideX">Experience</span>
               1.5+ Years
             </div>
           </div>
@@ -209,12 +206,8 @@
 </body>
 
 <script src="/assets/js/header.js"></script>
-<script src="./assets/js/loadingAnimation.js"></script>
-<script src="/assets/js/script.js"></script>
-<script src="./assets/js/space.js"></script>
-<script src="/assets/js/animateView.js"></script>
 <script src="./assets/js/particles.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+
 <script src="./assets/js/skeletonEffects.js"></script>
 <script src="./assets/js/counter.js"></script>
 <script type="text/javascript"> 
@@ -328,10 +321,16 @@
   },
   "retina_detect": true
 });
-
   </script>
   <script src="./assets/js/particles.min.js"></script>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+  <script src="https://unpkg.com/flickity@2.2/dist/flickity.pkgd.min.js"></script>
+  <script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
+  <script src="https://code.createjs.com/1.0.0/preloadjs.min.js"></script>
+  <script src="/assets/js/script.js"></script>
+  <script src="/assets/js/animateView.js"></script>
   <!--Sweet alert-->
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </html>

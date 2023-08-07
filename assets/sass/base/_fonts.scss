@@ -6,13 +6,14 @@ a {
 }
 
 h1 {
-  font-size: 64px;
+  font-size: 58px;
   font-weight: 500;
   line-height: 72px;
   letter-spacing: -1.28px;
   color: var(--gray-200, #e5e7eb);
+  font-family: "Poppins", sans-serif;
   @include md {
-    font-size: 48px;
+    font-size: 40px;
     @include sm {
       font-size: 28px;
       line-height: 36px;
@@ -27,6 +28,7 @@ h2 {
   line-height: 48px;
   letter-spacing: -0.8px;
   color: var(--gray-200, #e5e7eb);
+  font-family: "Poppins", sans-serif;
   @include sm {
     font-size: 24px;
     font-weight: 700;
@@ -39,24 +41,28 @@ h3 {
   font-size: 40px;
   font-weight: 600;
   line-height: 120%;
+  font-family: "Poppins", sans-serif;
 }
 
 h4 {
   font-size: 32px;
   font-weight: 600;
   line-height: 120%;
+  font-family: "Poppins", sans-serif;
 }
 
 h5 {
   font-size: 24px;
   font-weight: 600;
   line-height: 120%;
+  font-family: "Poppins", sans-serif;
 }
 
 h6 {
   font-size: 20px;
   font-weight: 600;
   line-height: 120%;
+  font-family: "Poppins", sans-serif;
 }
 
 p {
