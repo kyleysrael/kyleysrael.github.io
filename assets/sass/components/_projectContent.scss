@@ -1,0 +1,80 @@
+section {
+  &.projectContent {
+    &.heading {
+      //   background-color: rgb(193, 149, 82);
+      height: 80dvh;
+    }
+    & .container {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      position: relative;
+      & .wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 800px;
+        & .backButtonWrapper {
+          position: absolute;
+          left: 10%;
+          top: 0;
+          z-index: 2;
+          & a {
+            cursor: pointer;
+            height: max-content;
+            &:hover {
+              opacity: 0.5;
+            }
+            & i {
+              font-size: 24px;
+            }
+          }
+        }
+        & .content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 16px;
+          width: 100%;
+          z-index: 1;
+          & p {
+            text-align: center;
+            margin-bottom: 16px;
+          }
+        }
+        & .logoWrapper {
+          width: 100%;
+          position: absolute;
+          z-index: 0;
+          opacity: 0.039;
+          height: 100%;
+          top: 0;
+          & img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+        & .imgWrapper {
+          width: 100%;
+          border: 2px solid var(--border);
+          border-radius: 16px;
+          height: 400px;
+          max-width: 800px;
+          overflow: hidden;
+          & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        & > p {
+          color: $black;
+          text-align: center;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

@@ -7,41 +7,46 @@ a {
     display: inline-flex;
     align-items: center;
     overflow: hidden;
-    &::after {
-      content: "";
-      background-image: url(/assets/img/arrow.svg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      width: 24px;
-      align-items: center;
-      height: 18px;
-      margin-left: 8px;
+    &:hover {
+      background-color: $secodaryHover;
       transition: all 0.3s ease-in-out;
     }
-    &:hover {
-      &::after {
-        margin-left: 16px;
-        transition: all 0.3s ease-in-out;
-      }
-    }
-    &.withArrowDown {
+    & .withArrowRight {
       &::after {
         content: "";
-        background-image: url(/assets/img/downloadBtn.png);
+        background-image: url(/assets/img/arrow.svg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        width: 18px;
+        width: 24px;
         align-items: center;
-        height: 20px;
+        height: 18px;
         margin-left: 8px;
         transition: all 0.3s ease-in-out;
       }
-      &:focus {
+      &:hover {
         &::after {
-          transform: translateY(50px);
+          margin-left: 16px;
+          transition: all 0.3s ease-in-out;
         }
+      }
+    }
+  }
+  &.btnLink {
+    text-decoration: none;
+    &:hover {
+      opacity: 0.8;
+    }
+    &.withArrowRight {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      & span {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        right: -15px;
+        bottom: 4px;
       }
     }
   }

@@ -5,6 +5,7 @@ section {
       display: flex;
       flex-direction: column;
       gap: 32px;
+      padding-top: 60px;
       & .workHeading {
         display: flex;
         flex-direction: row;
@@ -44,86 +45,69 @@ section {
           }
         }
       }
-      & .gridWrapper {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 3fr));
-        justify-items: center;
-        gap: 32px;
-        position: relative;
-        @include sm {
-          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        }
-        & .card {
-          display: flex;
-          flex-direction: column;
+      & .portfolioContainer {
+        & .portfolioItem {
+          display: block;
+          height: 300px;
+          border: 1px solid $primary;
+          list-style: none;
           cursor: pointer;
-          width: 100%;
-          max-width: 400px;
-          gap: 18px;
-          & .imgContainer {
-            width: 100%;
-            height: 420px;
-            border-radius: 12px;
+          float: left;
+          box-sizing: border-box;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: 0.8s background ease-in-out;
+          @include md {
+            width: 50% !important;
+            height: 300px !important;
+            text-align: center;
             @include sm {
-              // height: 380px;
-            }
-            & img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
+              width: 100% !important;
             }
           }
-          & .description {
+          &:hover {
+            background: var(--bg);
+            transition: 0.8s background ease-in-out;
+          }
+          &.full {
+            width: 100%;
+          }
+          &.two-third {
+            width: 66.666%;
+          }
+          &.half {
+            width: 50%;
+          }
+          &.third {
+            width: 33.333%;
+          }
+          &.quarter {
+            width: 25%;
+          }
+          &.double-height {
+            height: 600px;
+          }
+          &.float-right {
+            float: right;
+          }
+          & > .content {
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            @include sm {
-              gap: 50px;
-            }
-            & .text {
-              width: 100%;
-              max-width: 300px;
-              font-size: 18px;
-              font-weight: 500;
-              line-height: 28px;
-              display: flex;
-              flex-direction: column;
-              gap: 5px;
-              @include sm {
-                font-size: 16px;
-                max-width: 280px;
-                font-weight: 500;
-                line-height: 24px;
-              }
-              & .content {
-                opacity: 0.7;
-                display: -webkit-box;
-                -webkit-line-clamp: 3;
-                -webkit-box-orient: vertical;
-                overflow: hidden;
-              }
-              & .preHeader {
-                font-size: 15px;
-                font-weight: 700;
-                color: $yellow;
-              }
-              .heading {
-                font-size: 25px;
-                font-weight: 700;
+            flex-direction: column;
+            gap: 8px;
+            &.reverse {
+              transform: rotate(-90deg);
+              @include md {
+                transform: unset;
               }
             }
-            & .icon {
-              width: 100%;
-              max-width: 48px;
-              height: 48px;
-              border-radius: 100%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              background: rgba(255, 255, 255, 0.4);
-              backdrop-filter: blur(15px);
+            & span {
+              color: $yellow;
+              font-weight: 700;
+              font-size: 15px;
+            }
+            & p {
+              font-size: 15px;
             }
           }
         }
@@ -136,3 +120,101 @@ section {
     }
   }
 }
+
+// .portfolioItem {
+//   display: block;
+//   height: 300px;
+//   border: 2px solid #fff;
+//   list-style: none;
+//   background: #47a3da;
+//   float: left;
+//   box-sizing: border-box;
+// }
+
+// /* different sizes */
+// .full {
+//   width: 100%;
+//   background: #d35400;
+// }
+// .two-third {
+//   width: 66.666%;
+//   background: #27ae60;
+// }
+// .half {
+//   width: 50%;
+//   background: #c0392b;
+// }
+// .third {
+//   width: 33.333%;
+//   background: #16a085;
+// }
+// .quarter {
+//   width: 25%;
+//   background: #34495e;
+// }
+
+// /* extra classes */
+// .double-height {
+//   height: 600px;
+//   background: #7f8c8d;
+// }
+// .float-right {
+//   float: right;
+// }
+
+// @media all and (max-width: 900px) {
+//   .half,
+//   .responsive-half.responsive-half {
+//     /* Override .responsive-half's other classes */
+//     width: 66.666%;
+//   }
+//   .quarter {
+//     width: 33.333%;
+//   }
+// }
+
+// @media all and (max-width: 600px) {
+//   .portfolio-item.portfolio-item {
+//     /* Override all other settings */
+//     width: 50%;
+//     height: 300px; /* override different height-classes */
+//   }
+// }
+
+// @media all and (max-width: 400px) {
+//   .portfolio-item.portfolio-item {
+//     /* Override all other settings */
+//     width: 100%;
+//   }
+// }
+
+/* non-essential code, just for fun */
+// .portfolio-items {
+//   resize: horizontal;
+// }
+// h1,
+// h2,
+// h3 {
+//   text-align: center;
+//   font-family: "Roboto Slab", Times, serif;
+// }
+// .portfolio-item {
+//   position: relative;
+//   opacity: 0.9;
+//   transition: opacity 0.2s ease-in-out;
+// }
+// .portfolio-item:hover {
+//   opacity: 1;
+// }
+// .portfolio-item:before {
+//   position: absolute;
+//   top: 50%;
+//   width: 100%;
+//   transform: translateY(-50%);
+//   text-align: center;
+
+//   content: attr(class);
+//   color: #fff;
+//   font-size: 2em;
+//   font-family: Raleway, Calibri, Arial, sans-serif;
+// }

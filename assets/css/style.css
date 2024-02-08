@@ -139,7 +139,11 @@ a.btnPrimary {
   align-items: center;
   overflow: hidden;
 }
-a.btnPrimary::after {
+a.btnPrimary:hover {
+  background-color: #9b7bff;
+  transition: all 0.3s ease-in-out;
+}
+a.btnPrimary .withArrowRight::after {
   content: "";
   background-image: url(/assets/img/arrow.svg);
   background-repeat: no-repeat;
@@ -151,24 +155,27 @@ a.btnPrimary::after {
   margin-left: 8px;
   transition: all 0.3s ease-in-out;
 }
-a.btnPrimary:hover::after {
+a.btnPrimary .withArrowRight:hover::after {
   margin-left: 16px;
   transition: all 0.3s ease-in-out;
 }
-a.btnPrimary.withArrowDown::after {
-  content: "";
-  background-image: url(/assets/img/downloadBtn.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 18px;
-  align-items: center;
-  height: 20px;
-  margin-left: 8px;
-  transition: all 0.3s ease-in-out;
+a.btnLink {
+  text-decoration: none;
 }
-a.btnPrimary.withArrowDown:focus::after {
-  transform: translateY(50px);
+a.btnLink:hover {
+  opacity: 0.8;
+}
+a.btnLink.withArrowRight {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+a.btnLink.withArrowRight span {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  right: -15px;
+  bottom: 4px;
 }
 
 .skeleton {
@@ -201,7 +208,7 @@ body .loading-page {
   position: fixed;
   top: 0;
   left: 0;
-  background: linear-gradient(to right, #0f1624, #6c4bef, #0f1624);
+  background: linear-gradient(to right, #0f1624, #0f1624, #0f1624);
   height: 100vh;
   width: 100vw;
   z-index: 999;
@@ -210,7 +217,7 @@ body .loading-page {
   gap: 1.5rem;
   align-items: center;
   justify-content: center;
-  color: #191654;
+  color: #6c4bef;
   overflow-y: hidden;
 }
 body .loading-page svg {
@@ -255,7 +262,12 @@ section .container {
   max-width: 1440px;
   padding: 50px 64px;
 }
-@media (max-width: 470px) {
+@media (max-width: 950px) {
+  section .container {
+    padding: 45px 30px;
+  }
+}
+@media (max-width: 950px) and (max-width: 470px) {
   section .container {
     padding: 25px 24px;
   }
@@ -274,6 +286,7 @@ header {
   justify-content: center;
   align-items: center;
   background-color: #111827;
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.12);
 }
 header.scrolled {
   box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.12);
@@ -335,24 +348,8 @@ header .container .wrapper .links a {
   transition: all 0.2s linear;
 }
 header .container .wrapper .links a:hover {
-  opacity: 0.5;
+  color: #eab308;
   transition: all 0.2s linear;
-}
-header .container .wrapper .links a:not(:nth-child(5))::after {
-  content: "";
-  background-image: url(/assets/img/Line.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 6px;
-  height: 22px;
-  position: absolute;
-  right: -25px;
-}
-@media (max-width: 950px) {
-  header .container .wrapper .links a:not(:nth-child(5))::after {
-    display: none;
-  }
 }
 header .container .wrapper .links .btn {
   display: none;
@@ -528,6 +525,9 @@ footer .container .wrapper .footerLinks a .bx:hover {
   transition: 0.3s all ease-in-out;
 }
 
+section.hero {
+  height: 89dvh;
+}
 section.hero .container {
   padding-top: 150px;
 }
@@ -559,6 +559,9 @@ section.hero .container .wrapper .bannerContent {
 section.hero .container .wrapper .bannerContent .heading {
   color: #e5e7eb;
 }
+section.hero .container .wrapper .bannerContent .heading h1 {
+  font-size: 80px;
+}
 @media (max-width: 470px) {
   section.hero .container .wrapper .bannerContent .heading h1 {
     font-size: 30px;
@@ -579,12 +582,19 @@ section.hero .container .wrapper .bannerContent .tools .bx {
   border-radius: 50%;
   background: transparent;
 }
+section.hero .container .wrapper .bannerContent .tools .bx:hover {
+  color: var(--color);
+  background: #0f1624;
+  border: solid 1px var(--color);
+  transition: 0.3s all ease-in-out;
+}
 
 section .container .wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 32px;
+  padding-top: 60px;
 }
 section .container .wrapper .workHeading {
   display: flex;
@@ -627,92 +637,76 @@ section .container .wrapper .workHeading .featured a {
 section .container .wrapper .workHeading .featured a.active span {
   color: #eab308;
 }
-section .container .wrapper .gridWrapper {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 3fr));
-  justify-items: center;
-  gap: 32px;
-  position: relative;
-}
-@media (max-width: 470px) {
-  section .container .wrapper .gridWrapper {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-}
-section .container .wrapper .gridWrapper .card {
-  display: flex;
-  flex-direction: column;
+section .container .wrapper .portfolioContainer .portfolioItem {
+  display: block;
+  height: 300px;
+  border: 1px solid #e5e7eb;
+  list-style: none;
   cursor: pointer;
-  width: 100%;
-  max-width: 400px;
-  gap: 18px;
-}
-section .container .wrapper .gridWrapper .card .imgContainer {
-  width: 100%;
-  height: 420px;
-  border-radius: 12px;
-}
-section .container .wrapper .gridWrapper .card .imgContainer img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-section .container .wrapper .gridWrapper .card .description {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-@media (max-width: 470px) {
-  section .container .wrapper .gridWrapper .card .description {
-    gap: 50px;
-  }
-}
-section .container .wrapper .gridWrapper .card .description .text {
-  width: 100%;
-  max-width: 300px;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-@media (max-width: 470px) {
-  section .container .wrapper .gridWrapper .card .description .text {
-    font-size: 16px;
-    max-width: 280px;
-    font-weight: 500;
-    line-height: 24px;
-  }
-}
-section .container .wrapper .gridWrapper .card .description .text .content {
-  opacity: 0.7;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-section .container .wrapper .gridWrapper .card .description .text .preHeader {
-  font-size: 15px;
-  font-weight: 700;
-  color: #eab308;
-}
-section .container .wrapper .gridWrapper .card .description .text .heading {
-  font-size: 25px;
-  font-weight: 700;
-}
-section .container .wrapper .gridWrapper .card .description .icon {
-  width: 100%;
-  max-width: 48px;
-  height: 48px;
-  border-radius: 100%;
+  float: left;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(15px);
+  transition: 0.8s background ease-in-out;
+}
+@media (max-width: 950px) {
+  section .container .wrapper .portfolioContainer .portfolioItem {
+    width: 50% !important;
+    height: 300px !important;
+    text-align: center;
+  }
+}
+@media (max-width: 950px) and (max-width: 470px) {
+  section .container .wrapper .portfolioContainer .portfolioItem {
+    width: 100% !important;
+  }
+}
+section .container .wrapper .portfolioContainer .portfolioItem:hover {
+  background: var(--bg);
+  transition: 0.8s background ease-in-out;
+}
+section .container .wrapper .portfolioContainer .portfolioItem.full {
+  width: 100%;
+}
+section .container .wrapper .portfolioContainer .portfolioItem.two-third {
+  width: 66.666%;
+}
+section .container .wrapper .portfolioContainer .portfolioItem.half {
+  width: 50%;
+}
+section .container .wrapper .portfolioContainer .portfolioItem.third {
+  width: 33.333%;
+}
+section .container .wrapper .portfolioContainer .portfolioItem.quarter {
+  width: 25%;
+}
+section .container .wrapper .portfolioContainer .portfolioItem.double-height {
+  height: 600px;
+}
+section .container .wrapper .portfolioContainer .portfolioItem.float-right {
+  float: right;
+}
+section .container .wrapper .portfolioContainer .portfolioItem > .content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+section .container .wrapper .portfolioContainer .portfolioItem > .content.reverse {
+  transform: rotate(-90deg);
+}
+@media (max-width: 950px) {
+  section .container .wrapper .portfolioContainer .portfolioItem > .content.reverse {
+    transform: unset;
+  }
+}
+section .container .wrapper .portfolioContainer .portfolioItem > .content span {
+  color: #eab308;
+  font-weight: 700;
+  font-size: 15px;
+}
+section .container .wrapper .portfolioContainer .portfolioItem > .content p {
+  font-size: 15px;
 }
 section .container .wrapper .btnContainer {
   display: flex;
@@ -720,6 +714,7 @@ section .container .wrapper .btnContainer {
   align-items: center;
 }
 
+/* non-essential code, just for fun */
 section.contactForm .container {
   padding-top: 100px;
 }
@@ -996,6 +991,82 @@ section.blog .container .wrapper .content ol {
 }
 section.blog .container .wrapper .content h4 {
   text-transform: uppercase;
+}
+
+section.projectContent.heading {
+  height: 80dvh;
+}
+section.projectContent .container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+section.projectContent .container .wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+}
+section.projectContent .container .wrapper .backButtonWrapper {
+  position: absolute;
+  left: 10%;
+  top: 0;
+  z-index: 2;
+}
+section.projectContent .container .wrapper .backButtonWrapper a {
+  cursor: pointer;
+  height: max-content;
+}
+section.projectContent .container .wrapper .backButtonWrapper a:hover {
+  opacity: 0.5;
+}
+section.projectContent .container .wrapper .backButtonWrapper a i {
+  font-size: 24px;
+}
+section.projectContent .container .wrapper .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  z-index: 1;
+}
+section.projectContent .container .wrapper .content p {
+  text-align: center;
+  margin-bottom: 16px;
+}
+section.projectContent .container .wrapper .logoWrapper {
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  opacity: 0.039;
+  height: 100%;
+  top: 0;
+}
+section.projectContent .container .wrapper .logoWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+section.projectContent .container .wrapper .imgWrapper {
+  width: 100%;
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  height: 400px;
+  max-width: 800px;
+  overflow: hidden;
+}
+section.projectContent .container .wrapper .imgWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section.projectContent .container .wrapper > p {
+  color: #0f1624;
+  text-align: center;
+  font-size: 16px;
 }
 
 /*# sourceMappingURL=style.css.map */

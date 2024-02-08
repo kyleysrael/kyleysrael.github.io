@@ -1,5 +1,6 @@
 section {
   &.hero {
+    height: 89dvh;
     & .container {
       padding-top: 150px;
       @include sm {
@@ -24,6 +25,7 @@ section {
           & .heading {
             color: $primary;
             & h1 {
+              font-size: 80px;
               @include sm {
                 font-size: 30px;
               }
@@ -42,6 +44,12 @@ section {
               padding: 8px;
               border-radius: 50%;
               background: transparent;
+              &:hover {
+                color: var(--color);
+                background: $black;
+                border: solid 1px var(--color);
+                transition: 0.3s all ease-in-out;
+              }
             }
           }
         }

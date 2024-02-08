@@ -8,6 +8,7 @@ header {
   justify-content: center;
   align-items: center;
   background-color: #111827;
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.12);
   &.scrolled {
     box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.12);
   }
@@ -62,22 +63,8 @@ header {
           line-height: 24px;
           transition: all 0.2s linear;
           &:hover {
-            opacity: 0.5;
+            color: $yellow;
             transition: all 0.2s linear;
-          }
-          &:not(:nth-child(5))::after {
-            content: "";
-            background-image: url(/assets/img/Line.svg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            width: 6px;
-            height: 22px;
-            position: absolute;
-            right: -25px;
-            @include md {
-              display: none;
-            }
           }
         }
         & .btn {
