@@ -1,6 +1,9 @@
 section {
   &.hero {
-    height: 89dvh;
+    height: 88dvh;
+    @include sm {
+      height: 80dvh;
+    }
     & .container {
       padding-top: 150px;
       @include sm {
@@ -13,7 +16,7 @@ section {
         align-items: center;
         & .bannerContent {
           width: 100%;
-          max-width: 682px;
+          max-width: 680px;
           text-align: center;
           display: flex;
           flex-direction: column;
@@ -27,7 +30,7 @@ section {
             & h1 {
               font-size: 80px;
               @include sm {
-                font-size: 30px;
+                font-size: 40px;
               }
             }
           }

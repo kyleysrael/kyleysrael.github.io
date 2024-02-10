@@ -526,7 +526,12 @@ footer .container .wrapper .footerLinks a .bx:hover {
 }
 
 section.hero {
-  height: 89dvh;
+  height: 88dvh;
+}
+@media (max-width: 470px) {
+  section.hero {
+    height: 80dvh;
+  }
 }
 section.hero .container {
   padding-top: 150px;
@@ -544,7 +549,7 @@ section.hero .container .wrapper {
 }
 section.hero .container .wrapper .bannerContent {
   width: 100%;
-  max-width: 682px;
+  max-width: 680px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -564,7 +569,7 @@ section.hero .container .wrapper .bannerContent .heading h1 {
 }
 @media (max-width: 470px) {
   section.hero .container .wrapper .bannerContent .heading h1 {
-    font-size: 30px;
+    font-size: 40px;
   }
 }
 section.hero .container .wrapper .bannerContent .tools {

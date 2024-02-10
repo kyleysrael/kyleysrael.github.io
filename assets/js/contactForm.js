@@ -35,7 +35,7 @@ function emptyerror() {
 function success() {
   swal({
     title: "Email sent",
-    text: "We try to reply in 24hrs",
+    text: "I'll aim to respond within 24 hours.",
     icon: "success",
   });
 }
